@@ -11,29 +11,37 @@
 </head>
 <body style="margin: 0;">
     <section class="nav position-relative">
-        <div class="logo-nav position-absolute d-flex justify-content-center">
-            <div>
-                <div class="logo">
-                    <h2>E_BookStore</h2>
+        <div class="d-md-flex d-none" style="width: 100%;">
+            <div class="logo-nav position-absolute d-flex justify-content-center">
+                <div>
+                    <div class="logo">
+                        <h2>E_BookStore</h2>
+                    </div>
+                    <div class="cart-search d-flex justify-content-between">
+                        <div class="cart-search">
+                            <span>Cart&nbsp<i class="fa-solid fa-cart-shopping"></i></span>
+                        </div>
+                        <div class="search">
+                            <span><i class="fa-solid fa-magnifying-glass"></i>&nbspSearch</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="cart-search d-flex justify-content-between">
-                    <div class="cart-search">
-                        <span>Cart&nbsp<i class="fa-solid fa-cart-shopping"></i></span>
-                    </div>
-                    <div class="search">
-                        <span><i class="fa-solid fa-magnifying-glass"></i>&nbspSearch</span>
-                    </div>
+            </div>
+            <div class="profile-nav d-flex justify-content-end">
+                <div class="credentials d-flex flex-column justify-content-center">
+                    <span>Signup</span>  
+                </div>
+                <div class="credentials d-flex flex-column justify-content-center">
+                    <span style="background: #000080; 
+                    color: white;
+                    border-radius: 1vw;">Login</span>
                 </div>
             </div>
         </div>
-        <div class="profile-nav d-flex justify-content-end">
-            <div class="credentials d-flex flex-column justify-content-center">
-                <span>Signup</span>  
-            </div>
-            <div class="credentials d-flex flex-column justify-content-center">
-                <span style="background: #000080; 
-                color: white;
-                border-radius: 1vw;">Login</span>
+        <div class="small-nav d-flex d-md-none justify-content-between">
+            <h2>E_BookStore</h2>
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
     </section>

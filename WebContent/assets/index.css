@@ -10,7 +10,7 @@
     top: 0;
     left: 0;
 }
-.logo h2{
+.nav h2{
     font-weight: bold;
     letter-spacing: 2px;
     color: #000080;
@@ -29,6 +29,16 @@
     font-weight: bold;
     letter-spacing: 1px;
     font-size: 1.5vw;
+    color: #000080;
+    cursor: pointer;
+}
+.small-nav{
+    width: 100%;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    font-size: 5vw;
     color: #000080;
     cursor: pointer;
 }
