@@ -120,20 +120,26 @@
     text-align: center;
     color: #000080;
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 2vw;
 }
 .book a{
     text-align: center;
 }
 .buy-check{
-    width: 60%;
+    width: 80%;
     align-self: center;
 }
-.buy-check button{
+.book-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.book-button button{
     outline: none;
     border: none;
     background: #000080;
     color: white;
     border-radius: 1vw;
     padding: 0.5vw 1vw;
+    margin-bottom: 1vw
 }
