@@ -42,6 +42,63 @@
     color: #000080;
     cursor: pointer;
 }
+.menu-content{
+    display: none;
+    width: 50%;
+    right: 0;
+    top: 0;
+    background: white;
+    padding: 1vw;
+    border: 3px solid #000080;
+}
+.menu-content div{
+    padding: 1vw;
+}
+.menu-content p{
+    text-align: end;
+    font-weight: bold;
+    color: red;
+    padding-right: 1vw;
+    cursor: pointer;
+}
+.profile i{
+    font-size: 6vw;
+    border: 2px solid #000080;
+    border-radius: 50%;
+    padding: 1vw 1.5vw;
+    color: #000080;
+}
+.profile-info span{
+    font-size: 2vw;
+    color: #000080;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.cart-items{
+    color: #000080;
+    font-weight: bold;
+}
+.cart-items a{
+    text-decoration: none;
+    color: #000080;
+}
+.login-logout a{
+    color: #000080;
+    text-decoration: none;
+    font-weight: bold;
+    padding-right: 1vw;
+    display: flex;
+    align-items: center;
+}
+.login-logout button{
+    border: none;
+    outline: none;
+    background:#000080;
+    color: white;
+    padding: 1vw 2vw;
+    border-radius: 1vw;
+    font-weight: bold;
+}
 
 /* books styling*/
 .books{
