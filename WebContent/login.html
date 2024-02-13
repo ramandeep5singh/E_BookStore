@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/loginPage.css">
+    <title>E_BookStore</title>
+</head>
+<script src="assets/js/loginPage.js"></script>
+<body>
+    <div class="logo position-fixed">
+        <h1>E_BookStore</h1>
+    </div>
+    <section class="login-card d-flex justify-content-center">
+        <div class="card position-relative">
+            <h3>Login</h3>
+            <div id="admin-user" class="admin-user position-absolute">
+                <div><input type="radio" name="access-type" id="admin" value="admin">&nbsp<label for="admin">ADMIN</label></div>
+                <div><input type="radio" name="access-type" id="customer" value="customer">&nbsp<label for="customer">CUSTOMER</label></div>
+            </div>
+            <div id="next-button" class="next-button position-absolute">
+                <button onclick="showLogin()">NEXT&nbsp<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div id="admin-login" class="login position-absolute" style="display: none;">
+                <form class="position-relative" action="alogin" method="post">
+                    <div class="form-input d-flex flex-column justify-content-center">
+                        <div style="margin: 2vw 0;" class="d-flex justify-content-center">
+                            <input type="text" name="admin-id" id="" placeholder="Enter Admin ID">&nbsp<i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <input type="password" name="admin-password" id="" placeholder="Enter Admin Password">&nbsp<i class="fa-solid fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="form-button d-flex justify-content-center position-absolute">
+                        <button type="submit">LOGIN</button>
+                    </div>
+                </form>
+            </div>
+            <div id="customer-login" class="login position-absolute" style="display: none;">
+                <form class="position-relative" action="clogin" method="post">
+                    <div class="form-input d-flex flex-column justify-content-center">
+                        <div style="margin: 2vw 0;" class="d-flex justify-content-center">
+                            <input type="text" name="customer-id" id="" placeholder="Enter User ID">&nbsp<i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <input type="password" name="customer-password" id="" placeholder="Enter Password">&nbsp<i class="fa-solid fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="form-button d-flex justify-content-center position-absolute">
+                        <button type="submit">LOGIN</button>
+                    </div>
+                </form>
+                <div class="new-user d-flex justify-content-between">
+                    <div class="lr-new"></div>
+                    <span>New to E_BookStore?</span>
+                    <div class="lr-new"></div>
+                </div>
+                <div class="create-account d-flex justify-content-center">
+                    <a href="">Create your account</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>

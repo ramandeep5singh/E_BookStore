@@ -1,7 +1,7 @@
 /* nav-bar styling */
 .nav{
     padding: 1vw 6vw;
-    background: #84dbffd1;
+    background-color: #84dbffd1;
     box-shadow: 0 1px 10px 1px;
 }
 .logo-nav{
@@ -47,7 +47,7 @@
     width: 50%;
     right: 0;
     top: 0;
-    background: white;
+    background-color: white;
     padding: 1vw;
     border: 3px solid #000080;
 }
@@ -93,7 +93,7 @@
 .login-logout button{
     border: none;
     outline: none;
-    background:#000080;
+    background-color:#000080;
     color: white;
     padding: 1vw 2vw;
     border-radius: 1vw;
@@ -137,7 +137,7 @@
 .book-button button{
     outline: none;
     border: none;
-    background: #000080;
+    background-color: #000080;
     color: white;
     border-radius: 1vw;
     padding: 0.5vw 1vw;
