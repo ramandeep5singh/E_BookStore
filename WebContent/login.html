@@ -25,13 +25,13 @@
                 <button onclick="showLogin()">NEXT&nbsp<i class="fa-solid fa-arrow-right"></i></button>
             </div>
             <div id="admin-login" class="login position-absolute" style="display: none;">
-                <form class="position-relative" action="alogin" method="post">
+                <form class="position-relative" action="alogin" method="post" onsubmit="return checkAdminInputs()">
                     <div class="form-input d-flex flex-column justify-content-center">
                         <div style="margin: 2vw 0;" class="d-flex justify-content-center">
-                            <input type="text" name="admin-id" id="" placeholder="Enter Admin ID">&nbsp<i class="fa-solid fa-user"></i>
+                            <input type="text" name="admin-id" id="admin-input" placeholder="Enter Admin ID" onblur="checkLoginInput('11')">&nbsp<i class="fa-solid fa-user" id="admin-icon"></i>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <input type="password" name="admin-password" id="" placeholder="Enter Admin Password">&nbsp<i class="fa-solid fa-lock"></i>
+                            <input type="password" name="admin-password" id="a-password" placeholder="Enter Admin Password" onblur="checkLoginInput('12')">&nbsp<i class="fa-solid fa-lock" id="a-password-icon"></i>
                         </div>
                     </div>
                     <div class="form-button d-flex justify-content-center position-absolute">
@@ -40,27 +40,32 @@
                 </form>
             </div>
             <div id="customer-login" class="login position-absolute" style="display: none;">
-                <form class="position-relative" action="clogin" method="post">
+                <form class="position-relative" action="clogin" method="post" onsubmit="return checkCustomerInputs()">
                     <div class="form-input d-flex flex-column justify-content-center">
                         <div style="margin: 2vw 0;" class="d-flex justify-content-center">
-                            <input type="text" name="customer-id" id="" placeholder="Enter User ID">&nbsp<i class="fa-solid fa-user"></i>
+                            <input type="text" name="customer-id" id="customer-input" placeholder="Enter User ID" onblur="checkLoginInput('21')">&nbsp<i class="fa-solid fa-user" id="customer-icon"></i>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <input type="password" name="customer-password" id="" placeholder="Enter Password">&nbsp<i class="fa-solid fa-lock"></i>
+                            <input type="password" name="customer-password" id="c-password" placeholder="Enter Password" onblur="checkLoginInput('22')">&nbsp<i class="fa-solid fa-lock" id="c-password-icon"></i>
                         </div>
                     </div>
                     <div class="form-button d-flex justify-content-center position-absolute">
                         <button type="submit">LOGIN</button>
                     </div>
                 </form>
-                <div class="new-user d-flex justify-content-between">
-                    <div class="lr-new"></div>
-                    <span>New to E_BookStore?</span>
-                    <div class="lr-new"></div>
-                </div>
-                <div class="create-account d-flex justify-content-center">
-                    <a href="">Create your account</a>
-                </div>
+            </div>
+        </div>
+        <div id="new-user?" class="position-absolute" style="bottom: 0;
+        width: 30%;
+        padding-bottom: 2vw;
+        display: none;">
+            <div class="new-user d-flex justify-content-between">
+                <div class="lr-new"></div>
+                <span>New to E_BookStore?</span>
+                <div class="lr-new"></div>
+            </div>
+            <div class="create-account d-flex justify-content-center">
+                <a href="register.html">Create your account</a>
             </div>
         </div>
     </section>

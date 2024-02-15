@@ -16,6 +16,7 @@
     width: 30%;
     height: 65%;
     border: 1px solid #000080;
+    overflow: auto;
 }
 .card h3{
     padding: 1vw;
