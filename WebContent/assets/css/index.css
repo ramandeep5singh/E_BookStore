@@ -1,105 +1,95 @@
 /* nav-bar styling */
+.ribbon-span{
+	padding: 0.5vw 1vw;
+	color: white;
+	margin: 0.5vw 0;
+	border-radius: 0.5vw;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.count-cart{
+	background-color: white;
+	color: red;
+	font-weight: bold;
+	border-radius: 50%;
+	padding: 0.25vw 0.75vw;
+	transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.ribbon-span:hover .count-cart{
+	background: red;
+	color: white;
+}
+.ribbon-span:hover{
+	background-color: white;
+	color: #000080;
+}
 .nav{
     padding: 1vw 6vw;
     background-color: #84dbffd1;
     box-shadow: 0 1px 10px 1px;
 }
-.logo-nav{
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-.nav h2{
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #000080;
-}
-.cart-search span{
-    font-weight: bold;
-    color: #000080;
-    cursor: pointer;
-}
-.profile-nav{
-    width: 100%;
-    align-items: center;
-    z-index: 9;
-}
-.credentials a{
-    text-decoration: none;
-    padding: 1vw;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-size: 1.5vw;
-    color: #000080;
-    cursor: pointer;
-}
 .small-nav{
     width: 100%;
 }
-.menu{
-    display: flex;
-    align-items: center;
-    font-size: 5vw;
+.small-nav img{
+	width: 6vw;
+}
+.logo-categories{
+	align-items: center;
+}
+.categories ul{
+	list-style-type: none;
+}
+.categories ul>li{
+	font-size: 2vw;
+    font-weight: 600;
+    letter-spacing: 0.2vw;
+    margin: 0 2vw;
     color: #000080;
     cursor: pointer;
+    position: relative;
 }
-.menu-content{
-    display: none;
-    width: 50%;
-    right: 0;
-    top: 0;
-    background-color: white;
-    padding: 1vw;
-    border: 3px solid #000080;
+.category-bottom{
+	width: 0;
+	content: "";
+	height: 3px;
+	background-color: red;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: width 0.22s ease-in-out;
 }
-.menu-content div{
-    padding: 1vw;
+.categories ul>li:hover .category-bottom{
+	width: 100%;
 }
-.menu-content p{
-    text-align: end;
-    font-weight: bold;
-    color: red;
-    padding-right: 1vw;
-    cursor: pointer;
+.search{
+	display: flex;
+	align-items: center;
+	width: 30%;
 }
-.profile i{
-    font-size: 6vw;
-    border: 2px solid #000080;
-    border-radius: 50%;
-    padding: 1vw 1.5vw;
-    color: #000080;
-}
-.profile-info span{
-    font-size: 2vw;
-    color: #000080;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-.cart-items{
-    color: #000080;
-    font-weight: bold;
-}
-.cart-items a{
-    text-decoration: none;
-    color: #000080;
-}
-.login-logout a{
-    color: #000080;
-    text-decoration: none;
-    font-weight: bold;
-    padding-right: 1vw;
-    display: flex;
+.search-icon{
+	display: flex;
     align-items: center;
 }
-.login-logout button{
-    border: none;
-    outline: none;
-    background-color:#000080;
-    color: white;
-    padding: 1vw 2vw;
-    border-radius: 1vw;
-    font-weight: bold;
+.search-input{
+	width: 100%;
+}
+.search-input input{
+	width: 100%;
+	padding: 0.5vw;
+	outline: none;
+	border: 0.25vw solid #000080;
+	color: #000080;
+	font-weight: bold;
+}
+.search-icon{
+	padding: 0.5vw 0.75vw;
+	background-color: #000080;
+}
+.search-icon i{
+	color: white;
+	font-weight: bold;
+	
 }
 
 /* books styling*/

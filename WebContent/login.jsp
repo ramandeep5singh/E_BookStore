@@ -17,7 +17,7 @@
     <section class="login-card d-flex justify-content-center">
         <div class="card position-relative">
             <h3>Login</h3>
-            <div id="admin-user" class="admin-user position-absolute">
+            <!-- <div id="admin-user" class="admin-user position-absolute">
                 <div><input type="radio" name="access-type" id="admin" value="admin">&nbsp<label for="admin">ADMIN</label></div>
                 <div><input type="radio" name="access-type" id="customer" value="customer">&nbsp<label for="customer">CUSTOMER</label></div>
             </div>
@@ -38,8 +38,8 @@
                         <button type="submit">LOGIN</button>
                     </div>
                 </form>
-            </div>
-            <div id="customer-login" class="login position-absolute" style="display: none;">
+            </div> -->
+            <div id="customer-login" class="login position-absolute">
                 <form class="position-relative" action="clogin" method="post" onsubmit="return checkCustomerInputs()">
                     <div class="form-input d-flex flex-column justify-content-center">
                         <div style="margin: 2vw 0;" class="d-flex justify-content-center">
@@ -57,15 +57,14 @@
         </div>
         <div id="new-user?" class="position-absolute" style="bottom: 0;
         width: 30%;
-        padding-bottom: 2vw;
-        display: none;">
+        padding-bottom: 2vw;">
             <div class="new-user d-flex justify-content-between">
                 <div class="lr-new"></div>
                 <span>New to E_BookStore?</span>
                 <div class="lr-new"></div>
             </div>
             <div class="create-account d-flex justify-content-center">
-                <a href="register.html">Create your account</a>
+                <a href="register.jsp">Create your account</a>
             </div>
         </div>
     </section>

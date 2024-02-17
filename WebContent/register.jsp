@@ -16,8 +16,8 @@
     </div>
     <section class="login-card d-flex justify-content-center">
         <div class="card position-relative">
-            <h3>Register</h3>
-            <div class="login">
+            <h3 class="">Register</h3>
+            <div class="login position-absolute">
                 <form class="position-relative" action="register" method="post" onsubmit="checkregistration()">
                     <div class="form-input d-flex flex-column justify-content-between">
                         <div style="padding-top: 2vw;" class="d-flex justify-content-center">
