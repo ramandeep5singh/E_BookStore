@@ -31,15 +31,16 @@ public class displayBooksBean {
 //		this.imgUrl = imgUrl;
 //	}
 	
-	public HashMap<Integer,Book> getBooks() {
+	public HashMap<Integer,Book> getJavaBooks() {
 		HashMap<Integer,Book> h = new HashMap<>();
 		con = Connect.getConnection();
 		try {
-			ps = con.prepareStatement("select * from books;");
+			ps = con.prepareStatement("select * from books where type = ?;");
+			ps.setString(1, "java");
 			rs = ps.executeQuery();
 			
 			while(rs.next()) {
-				Book b = new Book(rs.getString("name"),rs.getInt("price"),rs.getInt("stock"),rs.getString("img_url"));
+				Book b = new Book(rs.getString("name"),rs.getInt("price"),rs.getInt("stock"),rs.getString("img_url"),rs.getString("type"));
 				h.put(rs.getInt("book_id"), b);
 			}
 			
@@ -48,9 +49,85 @@ public class displayBooksBean {
 		catch(SQLException e){}
 		finally {
 			try {
-				if(con!=null) {
-					con.close();
-				}
+				con.close();
+			}
+			catch(SQLException e) {}
+		}
+		
+		return h;
+	}
+	
+	public HashMap<Integer,Book> getPythonBooks() {
+		HashMap<Integer,Book> h = new HashMap<>();
+		con = Connect.getConnection();
+		try {
+			ps = con.prepareStatement("select * from books where type = ?;");
+			ps.setString(1, "python");
+			rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				Book b = new Book(rs.getString("name"),rs.getInt("price"),rs.getInt("stock"),rs.getString("img_url"),rs.getString("type"));
+				h.put(rs.getInt("book_id"), b);
+			}
+			
+			return h;
+		}
+		catch(SQLException e){}
+		finally {
+			try {
+				con.close();
+			}
+			catch(SQLException e) {}
+		}
+		
+		return h;
+	}
+	
+	public HashMap<Integer,Book> getCppBooks() {
+		HashMap<Integer,Book> h = new HashMap<>();
+		con = Connect.getConnection();
+		try {
+			ps = con.prepareStatement("select * from books where type = ?;");
+			ps.setString(1, "cpp");
+			rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				Book b = new Book(rs.getString("name"),rs.getInt("price"),rs.getInt("stock"),rs.getString("img_url"),rs.getString("type"));
+				h.put(rs.getInt("book_id"), b);
+			}
+			
+			return h;
+		}
+		catch(SQLException e){}
+		finally {
+			try {
+				con.close();
+			}
+			catch(SQLException e) {}
+		}
+		
+		return h;
+	}
+	
+	public HashMap<Integer,Book> getCBooks() {
+		HashMap<Integer,Book> h = new HashMap<>();
+		con = Connect.getConnection();
+		try {
+			ps = con.prepareStatement("select * from books where type = ?;");
+			ps.setString(1, "c");
+			rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				Book b = new Book(rs.getString("name"),rs.getInt("price"),rs.getInt("stock"),rs.getString("img_url"),rs.getString("type"));
+				h.put(rs.getInt("book_id"), b);
+			}
+			
+			return h;
+		}
+		catch(SQLException e){}
+		finally {
+			try {
+				con.close();
 			}
 			catch(SQLException e) {}
 		}

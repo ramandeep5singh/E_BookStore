@@ -5,12 +5,14 @@ public class Book {
 	private int price;
 	private int stock;
 	private String imgUrl;
+	private String type;
 	
-	public Book(String name, int price, int stock, String imgUrl) {
+	public Book(String name, int price, int stock, String imgUrl, String type) {
 		this.name = name;
 		this.price = price;
 		this.stock = stock;
 		this.imgUrl = imgUrl;
+		this.type = type;
 	}
 	
 	public String getName() {
@@ -24,5 +26,8 @@ public class Book {
 	}
 	public String getImgUrl() {
 		return this.imgUrl;
+	}
+	public String getType() {
+		return this.type;
 	}
 }

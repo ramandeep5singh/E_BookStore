@@ -96,6 +96,9 @@
 .books{
     padding: 1vw 6vw;
 }
+.books section{
+	margin-top: 2vw;
+}
 .books-contain{
     width: 100%;
 }
@@ -134,4 +137,28 @@
     border-radius: 1vw;
     padding: 0.5vw 1vw;
     margin-bottom: 1vw
+}
+.subject-heading{
+	text-align: center;
+	margin: 0;
+	color: #000080;
+    font-size: 3vw;
+    font-weight: bold;
+    letter-spacing: 0.5vw;
+    font-family: math;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.subject-heading::before{
+	content: "";
+	width: 40%;
+	height: 2px;
+	background-color: #000080;
+}
+.subject-heading::after{
+	content: "";
+	width: 40%;
+	height: 2px;
+	background-color: #000080;
 }
