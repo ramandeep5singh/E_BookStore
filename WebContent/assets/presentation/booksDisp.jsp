@@ -15,7 +15,7 @@
                     Integer key = entry.getKey();
                     Book book = entry.getValue();
             %>
-                   <div class="book d-flex flex-column col-md-4 col-sm-6">
+                <div class="book d-flex flex-column col-md-4 col-sm-6">
                     <img src="<%= book.getImgUrl() %>" alt="" style="align-self:center;">
                     <span><%= book.getName() %></span>
                     <span>Rs. <%= book.getPrice() %></span>

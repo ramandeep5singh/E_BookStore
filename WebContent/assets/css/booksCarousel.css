@@ -1,0 +1,33 @@
+.b-disp{
+    align-items: center;
+    border: 0.25vw solid #000080;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.book-img{
+    padding: 1vw;
+}
+.book-img img{
+    width: 100%;
+}
+.book-desc{
+    padding: 1vw;
+}
+.book-desc a{
+    text-decoration: none;
+    color: white;
+    background-color: #000080;
+    padding: 0.5vw 1vw;
+    border-radius: 1vw;
+}
+.slide{
+    padding: 2vw 0;
+}
+.active-slide{
+    content: "";
+    width: 1vw;
+    height: 0.5vw;
+    border-radius: 4px;
+    margin: 0 1vw;
+    cursor: pointer;
+}

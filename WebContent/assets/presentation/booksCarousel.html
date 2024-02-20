@@ -1,0 +1,62 @@
+<section class="container" style="padding: 5vw; height: 30vw;">
+    <section class="row justify-content-center position-relative" style="align-items: center; height: -webkit-fill-available;">
+        <div id="active-1" class="b-disp col-4" style="display: flex;
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        transform: perspective(50vw) rotateY(30deg);
+        transform-origin: left;
+        left: 0;
+        top: 0;" onclick="activeBlock(1)">
+            <div class="book-img position-relative">
+                <img src="books/images/let_us_python.jpg" alt="">
+            </div>
+            <div class="book-desc">
+                <p style="font-size: 1vw;">
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit.
+                </p>
+                <a href="" style="font-size: 1vw;">Buy Now</a>
+            </div>
+        </div>
+        <div id="active-2" class="b-disp d-flex col-4" onclick="activeBlock(2)" style="position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);">
+            <div class="book-img">
+                <img src="books/images/the_cpp.jpg" alt="">
+            </div>
+            <div class="book-desc">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit.
+                </p>
+                <a href="">Buy Now</a>
+            </div>
+        </div>
+        <div id="active-3" class="b-disp col-4" style="display: flex;
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        transform: perspective(50vw) rotateY(-30deg);
+        transform-origin: right;
+        right: 0;
+        top: 0;"  onclick="activeBlock(3)">
+            <div class="book-img">
+                <img src="books/images/Head_First.jpg" alt="">
+            </div>
+            <div class="book-desc">
+                <p style="font-size: 1vw;">
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit.
+                </p>
+                <a href="" style="font-size: 1vw;">Buy Now</a>
+            </div>
+        </div>
+    </section> 
+</section>
+<section class="slide d-flex justify-content-center">
+    <div id="active-slide-1" onclick="activeBlock(1)" class="active-slide" style="background-color: #0000806e;"></div>
+    <div id="active-slide-2" onclick="activeBlock(2)" class="active-slide" style="background-color: #000080;"></div>
+    <div id="active-slide-3" onclick="activeBlock(3)" class="active-slide" style="background-color: #0000806e;"></div>
+</section>
