@@ -64,7 +64,7 @@
                 <div class="lr-new"></div>
             </div>
             <div class="create-account d-flex justify-content-center">
-                <a href="register.jsp">Create your account</a>
+                <a href="register.jsp">Create your SoftBooks account</a>
             </div>
         </div>
     </section>

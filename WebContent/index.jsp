@@ -12,8 +12,11 @@
 </head>
 <script src="assets/js/index.js"></script>
 <script src="assets/js/booksCarousel.js"></script>
+<script src="assets/js/booksDisp.js"></script>
 <body style="margin: 0;">
-	<section id="scroll-nav" class="scroll-nav"><jsp:include page="assets/presentation/navbar.jsp" /></section>
+	<section id="scroll-nav" class="scroll-nav">
+        <jsp:include page="assets/presentation/navbar.jsp" />
+    </section>
 	<section class="position-absolute" style="width: 100%; top: 0;">
 		<jsp:include page="assets/presentation/navbar.jsp" />
 		<jsp:include page="assets/presentation/booksCarousel.html" />

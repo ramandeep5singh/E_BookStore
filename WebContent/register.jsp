@@ -15,9 +15,9 @@
         <h1>E_BookStore</h1>
     </div>
     <section class="login-card d-flex justify-content-center">
-        <div class="card position-relative">
+        <div class="card">
             <h3 class="">Register</h3>
-            <div class="login position-absolute">
+            <div class="login">
                 <form class="position-relative" action="register" method="post" onsubmit="checkregistration()">
                     <div class="form-input d-flex flex-column justify-content-between">
                         <div style="padding-top: 2vw;" class="d-flex justify-content-center">
@@ -28,6 +28,12 @@
                         </div>
                         <div style="padding-top: 2vw;" class="d-flex justify-content-center">
                             <input type="email" name="email" id="email" placeholder="Enter Email ID" onblur="checkInput(3)">&nbsp<i id="email-icon" class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div style="padding-top: 2vw;" class="d-flex justify-content-center">
+                            <input type="text" name="address1" id="address1" placeholder="Address Line 1" onblur="checkInput(3)">&nbsp<i id="email-icon" class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div style="padding-top: 2vw;" class="d-flex justify-content-center">
+                            <input type="text" name="address2" id="address2" placeholder="Address Line 2" onblur="checkInput(3)">&nbsp<i id="email-icon" class="fa-solid fa-envelope"></i>
                         </div>
                         <div style="padding-top: 2vw;" class="d-flex justify-content-center">
                             <input type="password" name="password" id="password" placeholder="Enter Password" onblur="checkInput(4)">&nbsp<i id="password-icon" class="fa-solid fa-lock"></i>

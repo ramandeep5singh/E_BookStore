@@ -21,6 +21,7 @@ function activeBlock(x){
             activeSlide2.style.backgroundColor = "#0000806e";
             activeSlide3.style.backgroundColor = "#0000806e";
 
+            active1.style.display = "flex";
             active1.style.width = "";
             active1.style.height = "";
             active1.style.transform = "translate(-50%, -50%)";
@@ -87,6 +88,7 @@ function activeBlock(x){
             active2.style.transform = "perspective(50vw) rotateY(30deg)";
             active2.style.transformOrigin = "left";
 
+            active3.style.display = "flex";
             active3.style.width = "";
             active3.style.height = "";
             active3.style.transform = "translate(-50%, -50%)";

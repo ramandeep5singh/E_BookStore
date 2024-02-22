@@ -16,10 +16,10 @@ z-index: 10;">
             <img src="assets/bookStoreLogo.png" alt="logo" />
             <div class="categories">
                 <ul class="d-flex" style="margin: 0;">
-                    <li><a href="#java">Java<div class="category-bottom position-absolute"></div></a></li>
-                    <li><a href="#python">Python<div class="category-bottom position-absolute"></div></a></li>
-                    <li><a href="#cpp">C++<div class="category-bottom position-absolute"></div></a></li>
-                    <li style="padding: 0 2px;"><a href="#c">C<div class="category-bottom position-absolute"></div></a></li>
+                    <li><a href="#java">Java<div id="java-under" class="category-bottom position-absolute"></div></a></li>
+                    <li><a href="#python">Python<div id="python-under" class="category-bottom position-absolute"></div></a></li>
+                    <li><a href="#cpp">C++<div id="cpp-under" class="category-bottom position-absolute"></div></a></li>
+                    <li style="padding: 0 2px;"><a href="#c">C<div id="c-under" class="category-bottom position-absolute"></div></a></li>
                 </ul>
             </div>
         </div>

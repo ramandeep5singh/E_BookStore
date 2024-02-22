@@ -7,7 +7,7 @@
 	Map<Integer,Book> c = books.getCBooks();
 %>
 <section class="books">
-    <section id="java">
+    <section class="category-section" id="java">
         <p class="subject-heading">JAVA</p>
         <div id="java" class="books-contain row">
             <%
@@ -19,22 +19,36 @@
                     <img src="<%= book.getImgUrl() %>" alt="" style="align-self:center;">
                     <span><%= book.getName() %></span>
                     <span>Rs. <%= book.getPrice() %></span>
-                    <div class="buy-check row">
+                    <!-- <div class="buy-check row">
                         <div class="book-button col-md-6 col-sm-12 col-6">
                             <button onclick="checkExistence()">Buy Now</button>
                         </div>
                         <div class="book-button col-md-6 col-sm-12 col-6">
                             <button onclick="return checkExistence()">Add to Cart</button>
                         </div>
-                    </div>
-                    <a href="">More Info&nbsp<i class="fa-solid fa-arrow-right"></i></a>
+                    </div> -->
+                    <form action="assets/presentation/bookDetails.jsp" method="get" style="display: flex;
+                    justify-content: center;">
+                        <input type="hidden" name="name" value="<%= book.getName() %>">
+                        <input type="hidden" name="price" value="<%= book.getPrice() %>">
+                        <input type="hidden" name="img-url" value="<%= book.getImgUrl() %>">
+                        <input type="hidden" name="author" value="<%= book.getAuthor() %>">
+                        <input type="hidden" name="publisher" value="<%= book.getPublisher() %>">
+                        <input type="hidden" name="description" value="<%= book.getDescription() %>">
+                        <input type="hidden" name="edition" value="<%= book.getEdition() %>">
+                        <input type="hidden" name="stock" value="<%= book.getStock() %>">
+                        <button type="submit" style="color: #000080;
+                        border: none;
+                        outline: none;
+                        background: transparent;">More Info&nbsp<i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
                 </div>
             <%
                 }
             %> 
         </div>
     </section>
-    <section id="python">
+    <section class="category-section" id="python">
         <p class="subject-heading">PYTHON</p>
         <div class="books-contain row">
             <%
@@ -61,7 +75,7 @@
             %> 
         </div>
     </section>
-    <section id="cpp">
+    <section class="category-section" id="cpp">
         <p class="subject-heading">CPP</p>
         <div class="books-contain row">
             <%
@@ -88,7 +102,7 @@
             %> 
         </div>
     </section>
-    <section id="c">
+    <section class="category-section" id="c">
         <span class="subject-heading">C</span>
         <div class="books-contain row">
             <%
