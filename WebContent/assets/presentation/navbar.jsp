@@ -1,8 +1,34 @@
+<%  Cookie[] cookies = request.getCookies();
+    
+    String name = "";
+    String phone = "";
+    String address = "";
+
+    if(cookies!=null){
+        for(Cookie cookie : cookies){ 
+            if("userName".equals(cookie.getName())){
+                name = cookie.getValue();
+            }
+            if("phone".equals(cookie.getName())){
+                phone = cookie.getValue();
+            }
+            if("address".equals(cookie.getName())){
+                address = cookie.getValue();
+            }
+        }
+    }
+%>
 <section style="background: #000080;
 z-index: 10;">
     <div class="nav-ribbon d-flex justify-content-end container">
         <div class="ribbon-span" >
+        <%  if(session.getAttribute("email")==null){ %>
             <span onclick="window.location.href='login.jsp'"><i class="fa-solid fa-user"></i>&nbspSign In</span>
+        <%  }
+            else{ %>
+                <span><%= (String)session.getAttribute("email") %><i class="fa-solid fa-caret-down"></i></span>
+            <% }
+        %>    
         </div>
         <div class="ribbon-span" style="margin-left: 1vw;">
             <span><i class="fa-solid fa-cart-shopping"></i>&nbspCart</span>

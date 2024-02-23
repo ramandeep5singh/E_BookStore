@@ -1,3 +1,8 @@
+<%
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+    response.setHeader("Pragma", "no-cache");
+    response.setHeader("Expires", "0");
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +18,11 @@
 <script src="assets/js/index.js"></script>
 <script src="assets/js/booksCarousel.js"></script>
 <script src="assets/js/booksDisp.js"></script>
+<script language="JavaScript">
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
 <body style="margin: 0;">
 	<section id="scroll-nav" class="scroll-nav">
         <jsp:include page="assets/presentation/navbar.jsp" />

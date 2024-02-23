@@ -28,7 +28,21 @@
         z-index: 10;">
             <div class="nav-ribbon d-flex justify-content-end container">
                 <div class="ribbon-span" >
-                    <span onclick="window.location.href='login.jsp'"><i class="fa-solid fa-user"></i>&nbspSign In</span>
+                    <%  if(session.getAttribute("email")==null){ %>
+                        <span class="position-relative" onclick="window.location.href='login.jsp'"><i class="fa-solid fa-user"></i>&nbspSign In
+                            <div class="position-absolute">
+                                <span class="d-flex"><i class="fa-regular fa-user"></i><%= name %></span>
+                                <span class="d-flex"><i class="fa-regular fa-user"></i><%= name %></span>
+                                <span class="d-flex"><i class="fa-regular fa-user"></i><%= name %></span>
+                                <a href="logout.jsp">LOGOUT</a>
+                            </div>
+                        </span>
+                    <%  }
+                        else{ %>
+                            <span><%= (String)session.getAttribute("email") %><i class="fa-solid fa-caret-down"></i></span>
+                        <% }
+                    %> 
+
                 </div>
                 <div class="ribbon-span" style="margin-left: 1vw;">
                     <span><i class="fa-solid fa-cart-shopping"></i>&nbspCart</span>
