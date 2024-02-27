@@ -3,7 +3,7 @@
     response.setHeader("Pragma", "no-cache");
     response.setHeader("Expires", "0");
 %>
-<%  if(session.getAttribute("email")==null){ %>
+<%  if(session.getAttribute("name")==null){ %>
     <!DOCTYPE html>
     <html lang="en">
     <head>

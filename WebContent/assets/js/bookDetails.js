@@ -23,14 +23,3 @@ function quantity(x){
         }
     }
 }
-function proceedPurchase(){
-    let userEmail = document.getElementById("user-email").textContent;
-
-    if(userEmail == "null"){
-        window.location.href = "../../login.jsp";
-    }
-    else{
-        console.log(userEmail);
-        alert("ordered successfully!!");
-    }
-}

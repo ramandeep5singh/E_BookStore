@@ -4,7 +4,7 @@ import bookPack.Book;
 import java.util.*;
 import java.sql.*;
 
-public class displayBooksBean {
+public class DisplayBooksBean {
 //	private int bookId;
 //	private String name;
 //	private int price;

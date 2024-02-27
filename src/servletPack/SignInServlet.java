@@ -22,13 +22,16 @@ public class SignInServlet extends HttpServlet {
         b.setPassword(password);
         
         if(b.login()) {
-			Cookie cookie1 = new Cookie("userName",b.getName());
-			Cookie cookie2 = new Cookie("phone",b.getPhone());
-			Cookie cookie3 = new Cookie("email",b.getEmail());
-			Cookie cookie4 = new Cookie("address",b.getAddress());
+			Cookie cookie = new Cookie("email",b.getEmail());
+			cookie.setMaxAge(24*60*60);
+			
+			response.addCookie(cookie);
 			
 			HttpSession session = request.getSession();
-			session.setAttribute("email", email);
+			session.setAttribute("name",b.getName());
+			session.setAttribute("phone",b.getPhone());
+			session.setAttribute("address",b.getAddress());
+			session.setMaxInactiveInterval(24*60*60);
 			
 			response.sendRedirect("index.jsp");
         }

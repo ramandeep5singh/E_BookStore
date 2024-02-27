@@ -1,5 +1,5 @@
 <%@ page import="java.util.Map, bookPack.Book" %>
-<jsp:useBean id="books" class="displayBeanPack.displayBooksBean"></jsp:useBean>
+<jsp:useBean id="books" class="displayBeanPack.DisplayBooksBean"></jsp:useBean>
 <%
 	Map<Integer,Book> java = books.getJavaBooks();
 	Map<Integer,Book> python = books.getPythonBooks();
@@ -29,6 +29,7 @@
                     </div> -->
                     <form action="assets/presentation/bookDetails.jsp" method="get" style="display: flex;
                     justify-content: center;">
+                        <input type="hidden" name="id" value="<%= key %>">
                         <input type="hidden" name="name" value="<%= book.getName() %>">
                         <input type="hidden" name="price" value="<%= book.getPrice() %>">
                         <input type="hidden" name="img-url" value="<%= book.getImgUrl() %>">

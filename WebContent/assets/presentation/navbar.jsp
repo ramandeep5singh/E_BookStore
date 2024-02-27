@@ -1,19 +1,15 @@
-<%  Cookie[] cookies = request.getCookies();
+<%  
+    Cookie[] cookies = request.getCookies();
     
-    String name = "";
-    String phone = "";
-    String address = "";
+    String email = "";
+    String userName = (String)session.getAttribute("name");
+    String phone = (String)session.getAttribute("phone");
+    String address = (String)session.getAttribute("address");
 
     if(cookies!=null){
         for(Cookie cookie : cookies){ 
-            if("userName".equals(cookie.getName())){
-                name = cookie.getValue();
-            }
-            if("phone".equals(cookie.getName())){
-                phone = cookie.getValue();
-            }
-            if("address".equals(cookie.getName())){
-                address = cookie.getValue();
+            if("email".equals(cookie.getName())){
+                email = cookie.getValue();
             }
         }
     }
@@ -21,12 +17,12 @@
 <section style="background: #000080;
 z-index: 10;">
     <div class="nav-ribbon d-flex justify-content-end container">
-        <div class="ribbon-span" >
-        <%  if(session.getAttribute("email")==null){ %>
+        <div class="ribbon-span position-relative">
+        <%  if(session.getAttribute("name")==null){ %>
             <span onclick="window.location.href='login.jsp'"><i class="fa-solid fa-user"></i>&nbspSign In</span>
         <%  }
             else{ %>
-                <span><%= (String)session.getAttribute("email") %><i class="fa-solid fa-caret-down"></i></span>
+            <span class="position-relative" onclick="profileCard(1)"><%= email %><i class="fa-solid fa-caret-down"></i></span>
             <% }
         %>    
         </div>
