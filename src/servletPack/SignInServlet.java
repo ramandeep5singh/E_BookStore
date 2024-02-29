@@ -6,7 +6,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 
 public class SignInServlet extends HttpServlet {
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
 		
 		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
@@ -61,5 +61,8 @@ public class SignInServlet extends HttpServlet {
     			rd.include(request,response);
         	}
         }
+	}
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		doPost(request,response);
 	}
 }

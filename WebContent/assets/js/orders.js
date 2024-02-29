@@ -35,6 +35,8 @@ function change(x){
         cancelAddress.style.display = "none";
     }
 }
+let count = 1;
+
 function quantity(x){
     let quantity = document.getElementById("quantity");
     let maxQuant = document.getElementById("stock").textContent;
@@ -43,6 +45,7 @@ function quantity(x){
         count++;
         if(count>maxQuant){
             alert("Out of stock!!");
+            count--;
         }
         else{
             quantity.value = count;
@@ -61,26 +64,54 @@ function quantity(x){
 function showSummary(){
     let orderSummary = document.getElementById("order-summary");
     let addressSummary = document.getElementById("address-summary");
+    let addressChange = document.getElementById("address-change");
 
+    addressChange.style.display = "none";
     orderSummary.style.display = "none";
     orderSummary.style.display = "flex";
     document.getElementById("address-confirm").style.display = "none";
 }
  /*AJAX FORM SUBMISSION*/
-document.getElementById("ajax-form").addEventListener("submit",function(event){
-    event.preventDefault();
+// function ajaxLogin(form){
+    
+//     let formData = new FormData(form);
 
-    let formData = new FormData(this);
+//     let xhr = new XMLHttpRequest();
+//     xhr.open("POST","../../ajaxlogin",true);
+//     xhr.onreadystatechange = function(){
+//         if(xhr.readyState === XMLHttpRequest.DONE){
+//             if(xhr.status === 200){
+//                 window.location.reload();
+//             }
+//             else{
+//                 console.log(xhr.responseText);
+//                 alert(xhr.responseText);
+//             }
+//         }
+//     };
+//     xhr.send(formData);
+// }
 
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST","login");
-    xhr.onload = function(){
-        if(xhr.status === 200){
-            window.location.reload();
-        }
-        else{
-            alert("Wrong Credentials");
-        }
-    };
-    xhr.send(formData);
-});
+function profileCard(x){
+    let card = document.getElementById("profile-card")
+
+    if(x==1){
+        card.style.display = "block";
+    }
+    else{
+        card.style.display = "none";
+    }
+}
+
+function showConfirm(){
+    document.getElementById("order-summary").style.display = "none";
+    document.getElementById("order-summary-tick").style.display = "block";
+    document.getElementById("payment-mode").style.display = "block";
+    let quantity = document.getElementById("quantity").value;
+
+    document.getElementById("quantity1").value = quantity;
+    document.getElementById("quantity2").value = quantity;
+    document.getElementById("item-count").textContent = quantity;
+    document.getElementById("total-bill").textContent = quantity+document.getElementById("item-count").textContent;
+
+}

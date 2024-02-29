@@ -18,11 +18,11 @@
 z-index: 10;">
     <div class="nav-ribbon d-flex justify-content-end container">
         <div class="ribbon-span position-relative">
-        <%  if(session.getAttribute("name")==null){ %>
+        <%  if(userName==null){ %>
             <span onclick="window.location.href='login.jsp'"><i class="fa-solid fa-user"></i>&nbspSign In</span>
         <%  }
             else{ %>
-            <span class="position-relative" onclick="profileCard(1)"><%= email %><i class="fa-solid fa-caret-down"></i></span>
+            <span class="position-relative" onclick="profileCard(1)"><%= userName %><i class="fa-solid fa-caret-down"></i></span>
             <% }
         %>    
         </div>

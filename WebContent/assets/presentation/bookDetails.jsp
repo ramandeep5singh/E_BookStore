@@ -168,6 +168,10 @@
                 <div class="buy-cart row justify-content-between">
                     <form style="padding: 0;"  class="col-12" action="orders.jsp" method="get">
                         <input type="hidden" name="id" value="<%= id %>">
+                        <input type="hidden" name="img" value="<%= imgUrl %>">
+                        <input type="hidden" name="name" value="<%= name %>">
+                        <input type="hidden" name="price" value="<%= price %>">
+                        <input type="hidden" name="stock" value="<%= stock %>">
                         <button type="submit" style="width: 100%;">Buy Now</button>
                     </form>
                     <button class="col-12" onclick="proceedPurchase()">Add to Cart</button>
