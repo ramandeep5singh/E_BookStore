@@ -21,15 +21,25 @@ z-index: 10;">
         <%  if(userName==null){ %>
             <span onclick="window.location.href='login.jsp'"><i class="fa-solid fa-user"></i>&nbspSign In</span>
         <%  }
+            else if(userName.equals("admin")){ %>
+                <span style="font-weight: bold;" class="position-relative" onclick="profileCard(1)"><%= userName %></span>
+        <%  } 
             else{ %>
-            <span class="position-relative" onclick="profileCard(1)"><%= userName %><i class="fa-solid fa-caret-down"></i></span>
-            <% }
-        %>    
+                <span class="position-relative" onclick="profileCard(1)"><%= userName %>&nbsp<i class="fa-solid fa-caret-down"></i></span>
+        <%  } %>   
         </div>
-        <div class="ribbon-span" style="margin-left: 1vw;">
-            <span><i class="fa-solid fa-cart-shopping"></i>&nbspCart</span>
-            <span class="count-cart">0</span>
-        </div>
+        <%  if(userName==null){ %>
+            <div class="ribbon-span" style="margin-left: 1vw;">
+                <span><i class="fa-solid fa-cart-shopping"></i>&nbspCart</span>
+                <span class="count-cart">0</span>
+            </div>
+        <%  }
+            else if(!userName.equals("admin")){ %>
+                <div class="ribbon-span" style="margin-left: 1vw;">
+                    <span><i class="fa-solid fa-cart-shopping"></i>&nbspCart</span>
+                    <span class="count-cart">0</span>
+                </div>
+        <%  } %>
     </div>
 </section>
 <section class="nav position-relative">

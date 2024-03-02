@@ -1,0 +1,20 @@
+.home{
+    height: 100%;
+    align-items: center;
+}
+.action{
+    text-align: center;
+}
+.action button{
+	border: none;
+	outline: none;
+    font-size: 2.5vw;
+    letter-spacing: 2px;
+    padding: 1.5vw;
+    background-color: #000080;
+    color: white;
+    border-radius: 10px;
+}
+.action button:hover{
+    box-shadow: 0 0 8px 1px black;
+}

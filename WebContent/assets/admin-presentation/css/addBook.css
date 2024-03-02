@@ -1,0 +1,100 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.add-book-form{
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    align-items: center;
+}
+.form{
+    padding: 2vw;
+    width: 30%;
+    border: 0.2vw solid #000080;
+    height: 80%;
+    overflow: auto;
+    background-color: white;
+}
+.form p{
+    top: 0;
+    left: 0;
+    background: red;
+    color: white;
+    padding: 0.5vw 1vw;
+    cursor: pointer;
+    font-weight: bold;
+}
+.form h1{
+    top: 0;
+    left: 0;
+    z-index: 11;
+    text-align: center;
+    color: #000080;
+    font-weight: bold;
+    font-size: 3vw;
+    margin-bottom: 1vw;
+}
+.form-input{
+    padding: 2vw 1vw; 
+}
+.form-input span{
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15%;
+    z-index: 9;
+    color: grey;
+    transition: all 0.2s ease-in-out;
+}
+.form-input input{
+    width: 85%;
+    border: none;
+    outline: none;
+    z-index: 10;
+    background: transparent;
+    border-bottom: 2px solid #000080;
+    padding: 0.5vw 1vw;
+}
+.form-input textarea{
+    z-index: 10;
+    background: transparent;
+    outline: none;
+    border: 2px solid #000080;
+}
+.form-input button{
+    outline: none;
+    border: none;
+    background-color: #000080;
+    color: white;
+    padding: 0.5vw 2vw;
+    border-radius: 7px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 1.5vw;
+    transition: all 0.2s ease-in-out;
+}
+.form-input button:hover{
+    box-shadow: 0 0 8px 1px black;
+}
+.form form>textarea{
+    width: 85%;
+}
+.type{
+    padding: 0 1vw;
+}
+.type label{
+    color: #000080;
+    font-weight: bold;
+}
+.q-in{
+    align-items: center;
+    color: #000080;
+}
+.q-in input{
+    width: 4vw;
+    outline: none;
+    outline: none;
+    border: 2px solid #000080;
+}

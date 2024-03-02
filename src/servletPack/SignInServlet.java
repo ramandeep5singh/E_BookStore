@@ -16,6 +16,16 @@ public class SignInServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         
+        ServletContext context = getServletContext();
+        String admin = "admin123";
+        String paramValue = context.getInitParameter("admin123");
+        
+        if(email.equals(admin) && password.equals(paramValue)) {
+        	HttpSession session = request.getSession();
+        	session.setAttribute("name", "admin");
+        	response.sendRedirect("index.jsp");
+        }
+        
         CredentialsBean b = new CredentialsBean();
         
         b.setEmail(email);

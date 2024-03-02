@@ -101,6 +101,13 @@
     }
 </style>
 <body style="margin: 0;">
+    <section id="add-book" class="position-absolute" style="top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    z-index: 10;">
+        <jsp:include page="assets/admin-presentation/addBook.jsp" />
+    </section>
     <div id="profile-card" class="profile-card position-absolute">
         <p style="top: 0;
         left: 0;" class="position-absolute"><i onclick="profileCard(2)" class="fa-solid fa-xmark"></i></p>
@@ -115,10 +122,17 @@
 	<section id="scroll-nav" class="scroll-nav">
         <jsp:include page="assets/presentation/navbar.jsp" />
     </section>
-	<section class="position-absolute" style="width: 100%; top: 0;">
+	<section class="position-absolute" style="width: 100%; top: 0; height: 100%;">
 		<jsp:include page="assets/presentation/navbar.jsp" />
-		<jsp:include page="assets/presentation/booksCarousel.html" />
-		<jsp:include page="assets/presentation/booksDisp.jsp" />
+	<%  if(userName==null || !userName.equals("admin")){ %> 
+        <jsp:include page="assets/presentation/booksCarousel.html" />
+        <jsp:include page="assets/presentation/booksDisp.jsp" />
+	<%  }
+        else{ %>
+        <div style="height: 74%;">
+            <jsp:include page="assets/admin-presentation/admin.jsp" />
+        </div>
+    <%  } %>
 	</section>
 </body>
 </html>
