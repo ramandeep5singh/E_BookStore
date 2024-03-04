@@ -22,6 +22,8 @@
 }
 .slide{
     padding: 2vw 0;
+    display: flex;
+    justify-content: center;
 }
 .active-slide{
     content: "";

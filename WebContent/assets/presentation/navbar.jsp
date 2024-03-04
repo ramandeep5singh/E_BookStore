@@ -48,10 +48,31 @@ z-index: 10;">
             <img src="assets/bookStoreLogo.png" alt="logo" />
             <div class="categories">
                 <ul class="d-flex" style="margin: 0;">
-                    <li><a href="#java">Java<div id="java-under" class="category-bottom position-absolute"></div></a></li>
-                    <li><a href="#python">Python<div id="python-under" class="category-bottom position-absolute"></div></a></li>
-                    <li><a href="#cpp">C++<div id="cpp-under" class="category-bottom position-absolute"></div></a></li>
-                    <li style="padding: 0 2px;"><a href="#c">C<div id="c-under" class="category-bottom position-absolute"></div></a></li>
+                    <li id="home-under" onclick="showContent(1)">
+                        <a class="position-relative">Home
+                            <div id="home-under1" class="category-bottom position-absolute" style="width: 100%;"></div>
+                        </a>
+                    </li>
+                    <li id="java-under" onclick="showContent(2)">
+                        <a class="position-relative">Java
+                            <div class="category-bottom position-absolute"></div>
+                        </a>
+                    </li>
+                    <li id="python-under" onclick="showContent(3)">
+                        <a class="position-relative">Python
+                            <div class="category-bottom position-absolute"></div>
+                        </a>
+                    </li>
+                    <li id="cpp-under" onclick="showContent(4)">
+                        <a class="position-relative">C++
+                            <div class="category-bottom position-absolute"></div>
+                        </a>
+                    </li>
+                    <li id="c-under" onclick="showContent(5)" style="padding: 0 2px;">
+                        <a class="position-relative">C
+                            <div class="category-bottom position-absolute"></div>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

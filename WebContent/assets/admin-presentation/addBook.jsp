@@ -82,6 +82,12 @@
                         <i class="fa-solid fa-plus" onclick="quantity(1)" style="cursor: pointer;"></i>
                     </div>
                     <div class="d-flex justify-content-center form-input position-relative">
+                        <span class="position-absolute" id="price1">
+                            Upload
+                        </span>
+                        <input type="file" name="file" id="file">
+                    </div>
+                    <div class="d-flex justify-content-center form-input position-relative">
                         <button type="submit">SUBMIT</button>
                     </div>
                 </form>

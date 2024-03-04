@@ -29,26 +29,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/booksCarousel.css">
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/booksCarousel.js"></script>
+    <script src="assets/js/booksDisp.js"></script>
+    <script language="JavaScript">
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+        function profileCard(x){
+            let card = document.getElementById("profile-card")
+
+            if(x==1){
+                card.style.display = "block";
+            }
+            else{
+                card.style.display = "none";
+            }
+        }
+    </script>
     <title>E_BookStore</title>
 </head>
-<script src="assets/js/index.js"></script>
-<script src="assets/js/booksCarousel.js"></script>
-<script src="assets/js/booksDisp.js"></script>
-<script language="JavaScript">
-    if ( window.history.replaceState ) {
-        window.history.replaceState( null, null, window.location.href );
-    }
-    function profileCard(x){
-        let card = document.getElementById("profile-card")
-
-        if(x==1){
-            card.style.display = "block";
-        }
-        else{
-            card.style.display = "none";
-        }
-    }
-</script>
 <style>
     .profile-card{
         display: none;
@@ -125,12 +126,16 @@
 	<section class="position-absolute" style="width: 100%; top: 0; height: 100%;">
 		<jsp:include page="assets/presentation/navbar.jsp" />
 	<%  if(userName==null || !userName.equals("admin")){ %> 
-        <jsp:include page="assets/presentation/booksCarousel.html" />
-        <jsp:include page="assets/presentation/booksDisp.jsp" />
+        <div class="position-relative">
+            <jsp:include page="assets/presentation/booksCarousel.html" />
+            <jsp:include page="assets/presentation/booksDisp.jsp" />
+        </div>
+        
 	<%  }
         else{ %>
-        <div style="height: 74%;">
+        <div class="position-relative" style="height: 74%;">
             <jsp:include page="assets/admin-presentation/admin.jsp" />
+            <jsp:include page="assets/presentation/booksDisp.jsp" />
         </div>
     <%  } %>
 	</section>
