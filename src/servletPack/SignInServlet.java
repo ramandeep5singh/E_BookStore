@@ -48,7 +48,7 @@ public class SignInServlet extends HttpServlet {
         else {
         	if(b.flag==0) {
         		out.print("<p style='color: red; position: absolute; "
-    					+ "text-align: center; width: 100%; top: 5vw;'>"
+    					+ "text-align: center; width: 100%; top: 8vw;'>"
     					+ "Wrong Credentials!!</p>");
     			
     			RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
@@ -56,7 +56,7 @@ public class SignInServlet extends HttpServlet {
         	}
         	else if(b.flag==1) {
         		out.print("<p style='color: red; position: absolute; "
-    					+ "text-align: center; width: 100%; top: 5vw;'>"
+    					+ "text-align: center; width: 100%; top: 8vw;'>"
     					+ "Wrong Password!!</p>");
     			
     			RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
@@ -64,7 +64,7 @@ public class SignInServlet extends HttpServlet {
         	}
         	else {
         		out.print("<p style='color: red; position: absolute; "
-    					+ "text-align: center; width: 100%; top: 5vw;'>"
+    					+ "text-align: center; width: 100%; top: 8vw;'>"
     					+ "Something went Wrong!!</p>");
     			
     			RequestDispatcher rd = request.getRequestDispatcher("login.jsp");

@@ -14,7 +14,7 @@
             <div class="form position-relative">
                 <p class="position-absolute" onclick="addCard(2)"><i class="fa-solid fa-x"></i></p>
                 <h1 class="position-sticky">Add New Book</h1>
-                <form class="d-flex flex-column" action="../../addBook" method="get">
+                <form class="d-flex flex-column" action="addBook" method="post" enctype="multipart/form-data">
                     <div class="d-flex justify-content-center form-input position-relative">
                         <span class="position-absolute" id="name1">
                             Name

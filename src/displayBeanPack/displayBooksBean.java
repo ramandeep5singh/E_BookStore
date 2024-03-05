@@ -1,5 +1,6 @@
 package displayBeanPack;
 import connection.Connect;
+import java.io.*;
 import bookPack.Book;
 import java.util.*;
 import java.sql.*;
@@ -47,17 +48,27 @@ public class DisplayBooksBean {
 			rs = ps.executeQuery();
 			
 			while(rs.next()) {
+				BufferedReader reader = new BufferedReader(new FileReader(rs.getString("description")));
+				String line;
+				StringBuffer desc = new StringBuffer();
+				while((line = reader.readLine())!=null) {
+					desc.append(line);
+				}
+				     
+				String detailDesc = desc.toString();
 				Book b = new Book(rs.getString("name"),rs.getInt("price"),
 						rs.getInt("stock"),rs.getString("img_url"),
 						rs.getString("type"),rs.getString("author"),
-						rs.getString("description"),rs.getString("publisher"),
+						detailDesc,rs.getString("publisher"),
 						rs.getString("edition"));
 				h.put(rs.getInt("book_id"), b);
+				
+				reader.close();
 			}
 			
 			return h;
 		}
-		catch(SQLException e){}
+		catch(SQLException | IOException e){}
 		finally {
 			try {
 				con.close();
@@ -84,17 +95,25 @@ public class DisplayBooksBean {
 			rs = ps.executeQuery();
 			
 			while(rs.next()) {
+				BufferedReader reader = new BufferedReader(new FileReader(rs.getString("description")));
+				String line;
+				StringBuffer desc = new StringBuffer();
+				while((line = reader.readLine())!=null) {
+					desc.append(line);
+				}
+				
+				String detailDesc = desc.toString();
 				Book b = new Book(rs.getString("name"),rs.getInt("price"),
 						rs.getInt("stock"),rs.getString("img_url"),
 						rs.getString("type"),rs.getString("author"),
-						rs.getString("description"),rs.getString("publisher"),
+						detailDesc,rs.getString("publisher"),
 						rs.getString("edition"));
 				h.put(rs.getInt("book_id"), b);
 			}
 			
 			return h;
 		}
-		catch(SQLException e){}
+		catch(SQLException | IOException e){}
 		finally {
 			try {
 				con.close();
@@ -121,17 +140,25 @@ public class DisplayBooksBean {
 			rs = ps.executeQuery();
 			
 			while(rs.next()) {
+				BufferedReader reader = new BufferedReader(new FileReader(rs.getString("description")));
+				String line;
+				StringBuffer desc = new StringBuffer();
+				while((line = reader.readLine())!=null) {
+					desc.append(line);
+				}
+				
+				String detailDesc = desc.toString();
 				Book b = new Book(rs.getString("name"),rs.getInt("price"),
 						rs.getInt("stock"),rs.getString("img_url"),
 						rs.getString("type"),rs.getString("author"),
-						rs.getString("description"),rs.getString("publisher"),
+						detailDesc,rs.getString("publisher"),
 						rs.getString("edition"));
 				h.put(rs.getInt("book_id"), b);
 			}
 			
 			return h;
 		}
-		catch(SQLException e){}
+		catch(SQLException | IOException e){}
 		finally {
 			try {
 				con.close();
@@ -158,17 +185,25 @@ public class DisplayBooksBean {
 			rs = ps.executeQuery();
 			
 			while(rs.next()) {
+				BufferedReader reader = new BufferedReader(new FileReader(rs.getString("description")));
+				String line;
+				StringBuffer desc = new StringBuffer();
+				while((line = reader.readLine())!=null) {
+					desc.append(line);
+				}
+				
+				String detailDesc = desc.toString();
 				Book b = new Book(rs.getString("name"),rs.getInt("price"),
 						rs.getInt("stock"),rs.getString("img_url"),
 						rs.getString("type"),rs.getString("author"),
-						rs.getString("publisher"),rs.getString("description"),
+						detailDesc,rs.getString("publisher"),
 						rs.getString("edition"));
 				h.put(rs.getInt("book_id"), b);
 			}
 			
 			return h;
 		}
-		catch(SQLException e){}
+		catch(SQLException | IOException e){}
 		finally {
 			try {
 				con.close();
