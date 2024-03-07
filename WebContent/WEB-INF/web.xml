@@ -64,6 +64,15 @@
   	<url-pattern>/addBook</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>cart</servlet-name>
+  	<servlet-class>servletPack.CartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cart</servlet-name>
+  	<url-pattern>/cart</url-pattern>
+  </servlet-mapping>
+  
   <context-param>
   	<param-name>admin123</param-name>
   	<param-value>123admin</param-value>

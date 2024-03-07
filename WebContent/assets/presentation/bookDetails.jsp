@@ -31,6 +31,7 @@
     String name = request.getParameter("name");
     String price = request.getParameter("price");
     String imgUrl = request.getParameter("img-url");
+    String type = request.getParameter("type");
     String author = request.getParameter("author");
     String publisher = request.getParameter("publisher");
     String edition = request.getParameter("edition");
@@ -174,7 +175,20 @@
                         <input type="hidden" name="stock" value="<%= stock %>">
                         <button type="submit" style="width: 100%;">Buy Now</button>
                     </form>
-                    <button class="col-12" onclick="proceedPurchase()">Add to Cart</button>
+                    <form style="padding: 0;"  class="col-12" action="../../cart" method="get">
+                        <input type="hidden" name="id" value="<%= id %>">
+                        <input type="hidden" name="name" value="<%= name %>">
+                        <input type="hidden" name="email" value="<%= email %>">
+                        <input type="hidden" name="price" value="<%= price %>">
+                        <input type="hidden" name="img-url" value="<%= imgUrl %>">
+                        <input type="hidden" name="type" value="<%= type %>">
+                        <input type="hidden" name="author" value="<%= author %>">
+                        <input type="hidden" name="publisher" value="<%= publisher %>">
+                        <input type="hidden" name="description" value="<%= description %>">
+                        <input type="hidden" name="edition" value="<%= edition %>">
+                        <input type="hidden" name="stock" value="<%= stock %>">
+                        <button type="submit" style="width: 100%;">Add to Cart</button>
+                    </form>
                 </div>
                 <div class="quantity d-flex justify-content-between">
                     <span>Quantity</span>

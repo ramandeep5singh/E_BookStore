@@ -1,3 +1,4 @@
+<%@ page import="java.io.File" %>
 <%  
     Cookie[] cookies = request.getCookies();
     
@@ -11,6 +12,18 @@
             if("email".equals(cookie.getName())){
                 email = cookie.getValue();
             }
+        }
+    }
+    
+    int cartCount = 0;
+
+    if(email!=""){
+        String path = "C:\\Users\\Ramandeep Singh\\eclipse-workspace\\E_BookStore\\WebContent\\books\\cart\\"+email;
+        File folder = new File(path);
+        File[] files = folder.listFiles();
+
+        if(files!=null){
+            cartCount = files.length;
         }
     }
 %>
@@ -28,17 +41,12 @@ z-index: 10;">
                 <span class="position-relative" onclick="profileCard(1)"><%= userName %>&nbsp<i class="fa-solid fa-caret-down"></i></span>
         <%  } %>   
         </div>
-        <%  if(userName==null){ %>
-            <div class="ribbon-span" style="margin-left: 1vw;">
+        <%  if(userName!=null && !userName.equals("admin")){ %>
+            <div class="ribbon-span" style="margin-left: 1vw;" 
+            onclick="window.location.href='assets/presentation/cart.html'">
                 <span><i class="fa-solid fa-cart-shopping"></i>&nbspCart</span>
-                <span class="count-cart">0</span>
+                <span class="count-cart"><%= cartCount %></span>
             </div>
-        <%  }
-            else if(!userName.equals("admin")){ %>
-                <div class="ribbon-span" style="margin-left: 1vw;">
-                    <span><i class="fa-solid fa-cart-shopping"></i>&nbspCart</span>
-                    <span class="count-cart">0</span>
-                </div>
         <%  } %>
     </div>
 </section>

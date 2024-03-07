@@ -6,6 +6,11 @@
 	Map<Integer,Book> cpp = books.getCppBooks();
 	Map<Integer,Book> c = books.getCBooks();
 %>
+<script>
+    window.addEventListener("onload",function(){
+        console.log(document.getElementById('test-span').textContent);
+    });
+</script>
 <section class="category-section position-absolute" id="java-books" style="margin-top: 2vw;
 padding: 1vw 6vw;
 display: none;">
@@ -34,6 +39,7 @@ display: none;">
                     <input type="hidden" name="name" value="<%= book.getName() %>">
                     <input type="hidden" name="price" value="<%= book.getPrice() %>">
                     <input type="hidden" name="img-url" value="<%= book.getImgUrl() %>">
+                    <input type="hidden" name="type" value="<%= book.getType() %>">
                     <input type="hidden" name="author" value="<%= book.getAuthor() %>">
                     <input type="hidden" name="publisher" value="<%= book.getPublisher() %>">
                     <input type="hidden" name="description" value="<%= book.getDescription() %>">
@@ -78,6 +84,7 @@ display: none;">
                     <input type="hidden" name="name" value="<%= book.getName() %>">
                     <input type="hidden" name="price" value="<%= book.getPrice() %>">
                     <input type="hidden" name="img-url" value="<%= book.getImgUrl() %>">
+                    <input type="hidden" name="type" value="<%= book.getType() %>">
                     <input type="hidden" name="author" value="<%= book.getAuthor() %>">
                     <input type="hidden" name="publisher" value="<%= book.getPublisher() %>">
                     <input type="hidden" name="description" value="<%= book.getDescription() %>">
@@ -122,6 +129,7 @@ display: none;">
                     <input type="hidden" name="name" value="<%= book.getName() %>">
                     <input type="hidden" name="price" value="<%= book.getPrice() %>">
                     <input type="hidden" name="img-url" value="<%= book.getImgUrl() %>">
+                    <input type="hidden" name="type" value="<%= book.getType() %>">
                     <input type="hidden" name="author" value="<%= book.getAuthor() %>">
                     <input type="hidden" name="publisher" value="<%= book.getPublisher() %>">
                     <input type="hidden" name="description" value="<%= book.getDescription() %>">
@@ -166,6 +174,7 @@ display: none;">
                     <input type="hidden" name="name" value="<%= book.getName() %>">
                     <input type="hidden" name="price" value="<%= book.getPrice() %>">
                     <input type="hidden" name="img-url" value="<%= book.getImgUrl() %>">
+                    <input type="hidden" name="type" value="<%= book.getType() %>">
                     <input type="hidden" name="author" value="<%= book.getAuthor() %>">
                     <input type="hidden" name="publisher" value="<%= book.getPublisher() %>">
                     <input type="hidden" name="description" value="<%= book.getDescription() %>">
