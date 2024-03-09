@@ -1,3 +1,4 @@
+<%@ page import="java.io.File" %>
 <%
     response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
     response.setHeader("Pragma", "no-cache"); // HTTP 1.0
@@ -93,6 +94,18 @@
             }
         }
     }
+
+    int cartCount = 0;
+
+    if(email!=""){
+        String path = "C:\\Users\\Ramandeep Singh\\eclipse-workspace\\E_BookStore\\WebContent\\books\\cart\\"+email;
+        File folder = new File(path);
+        File[] files = folder.listFiles();
+
+        if(files!=null){
+            cartCount = files.length;
+        }
+    }
 %>
 <body>
     <div id="profile-card" class="profile-card position-absolute">
@@ -107,22 +120,26 @@
         <a class="d-none" href="update.jsp">Update</a>
     </div>  
     <section style="background: #000080;
-    z-index: 10;
-    width: 100%;">
+    z-index: 10;">
         <div class="nav-ribbon d-flex justify-content-end container">
             <div class="ribbon-span position-relative">
-                <%  if(userName==null){ %>
-                    <span onclick="window.location.href='login.jsp'"><i class="fa-solid fa-user"></i>&nbspSign In</span>
-                <%  }
-                    else{ %>
-                    <span class="position-relative" onclick="profileCard(1)"><%= userName %><i class="fa-solid fa-caret-down"></i></span>
-                    <% }
-                %>    
+            <%  if(userName==null){ %>
+                <span onclick="window.location.href='login.jsp'"><i class="fa-solid fa-user"></i>&nbspSign In</span>
+            <%  }
+                else if(userName.equals("admin")){ %>
+                    <span style="font-weight: bold;" class="position-relative" onclick="profileCard(1)"><%= userName %></span>
+            <%  } 
+                else{ %>
+                    <span class="position-relative" onclick="profileCard(1)"><%= userName %>&nbsp<i class="fa-solid fa-caret-down"></i></span>
+            <%  } %>   
             </div>
-            <div class="ribbon-span" style="margin-left: 1vw;">
-                <span><i class="fa-solid fa-cart-shopping"></i>&nbspCart</span>
-                <span class="count-cart">0</span>
-            </div>
+            <%  if(userName!=null && !userName.equals("admin")){ %>
+                <div class="ribbon-span" style="margin-left: 1vw;" 
+                onclick="window.location.href='assets/presentation/cart.jsp?email=<%= email %>'">
+                    <span><i class="fa-solid fa-cart-shopping"></i>&nbspCart</span>
+                    <span class="count-cart"><%= cartCount %></span>
+                </div>
+            <%  } %>
         </div>
     </section>
     <section class="row" style="width: 100%;">

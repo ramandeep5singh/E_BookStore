@@ -13,7 +13,8 @@
 </script>
 <section class="category-section position-absolute" id="java-books" style="margin-top: 2vw;
 padding: 1vw 6vw;
-display: none;">
+display: none;
+width: 100%;">
     <p class="subject-heading">JAVA</p>
     <div class="books-contain row">
         <%
@@ -58,7 +59,8 @@ display: none;">
 </section>
 <section class="category-section" id="python-books" style="margin-top: 2vw;
 padding: 1vw 6vw;
-display: none;">
+display: none;
+width: 100%;">
     <p class="subject-heading">PYTHON</p>
     <div class="books-contain row">
         <%
@@ -103,7 +105,8 @@ display: none;">
 </section>
 <section class="category-section" id="cpp-books" style="margin-top: 2vw;
 padding: 1vw 6vw;
-display: none;">
+display: none;
+width: 100%;">
     <p class="subject-heading">CPP</p>
     <div class="books-contain row">
         <%
@@ -148,7 +151,8 @@ display: none;">
 </section>
 <section class="category-section" id="c-books" style="margin-top: 2vw;
 padding: 1vw 6vw;
-display: none;">
+display: none;
+width: 100%;">
     <span class="subject-heading">C</span>
     <div class="books-contain row">
         <%

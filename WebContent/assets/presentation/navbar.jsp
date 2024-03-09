@@ -43,7 +43,7 @@ z-index: 10;">
         </div>
         <%  if(userName!=null && !userName.equals("admin")){ %>
             <div class="ribbon-span" style="margin-left: 1vw;" 
-            onclick="window.location.href='assets/presentation/cart.html'">
+            onclick="window.location.href='assets/presentation/cart.jsp?email=<%= email %>'">
                 <span><i class="fa-solid fa-cart-shopping"></i>&nbspCart</span>
                 <span class="count-cart"><%= cartCount %></span>
             </div>

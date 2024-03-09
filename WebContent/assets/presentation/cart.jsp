@@ -1,3 +1,7 @@
+<%@ page import="java.io.*, bookPack.Book" %>
+<%
+    String email = request.getParameter("email");
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,40 +16,79 @@
 <body>
     <section class="d-flex" style="height: 100vh;
     width: 100%;">
-        <div id="order-summary" class="card-content d-flex col-md-8 col-12" 
+        <div id="order-summary" class="card-content d-flex flex-column col-md-8 col-12" 
         style="padding: 3vw;
-        height: fit-content;">
-            <div class="book-selected">
-                <div class="img">
-                    <img src="../../books/images/Head_First.jpg" alt="">
-                </div>
-                <div class="q-in d-flex justify-content-center">
-                    <i class="fa-solid fa-minus" onclick="quantity(2)" style="cursor: pointer;"></i>
-                    <input type="number" name="quantity" id="quantity" value="1">
-                    <i class="fa-solid fa-plus" onclick="quantity(1)" style="cursor: pointer;"></i>
-                </div>
-            </div>
-            <div class="img-desc position-relative">
-                <div class="name d-flex justify-content-between">
-                    <span>Head First Java</span>
-                    <span class="stocks">Available Stock: 
-                        <span style="background: transparent;color: #000080;
-                        font-size: 1.25vw;
-                        font-weight: 400;" id="stock">10</span>
-                    </span>
-                </div>
-                <div class="price">
-                    <span><i class="fa-solid fa-indian-rupee-sign"></i>500</span>
-                </div>
-                <div class="confirm d-flex justify-content-center position-absolute">
-                    <button class="change-button" style="margin: 0;" onclick="showConfirm()">Order</button>
-                </div>
-            </div>
+        height: 100%;
+        overflow: auto;">
+        <%  String path = "C:\\Users\\Ramandeep Singh\\eclipse-workspace\\E_BookStore\\WebContent\\books\\cart\\"+email;
+            File folder = new File(path);
+            File[] files = folder.listFiles();
+
+            int cartCount=0;
+            int price=0;
+
+            if(files!=null){
+                cartCount = files.length;
+                for(File file : files){
+                    String fileName = file.getName();
+                    String numberStr = fileName.replaceAll("[^0-9]", "");
+                    int id = Integer.parseInt(numberStr);
+
+                    FileInputStream fileIn = new FileInputStream(file);
+                    ObjectInputStream os = new ObjectInputStream(fileIn);
+
+                    Book b = (Book)os.readObject();
+                    price = price+b.getPrice(); %>
+                    <div class="cart-item d-flex" style="margin-bottom: 5vw;">
+                        <div class="book-selected">
+                            <div class="img">
+                                <img src="../../<%= b.getImgUrl() %>" alt="">
+                            </div>
+                            <div class="q-in d-flex justify-content-center">
+                                <i class="fa-solid fa-minus" onclick="quantity(2)" style="cursor: pointer;"></i>
+                                <input type="number" name="quantity" id="quantity" value="1">
+                                <i class="fa-solid fa-plus" onclick="quantity(1)" style="cursor: pointer;"></i>
+                            </div>
+                        </div>
+                        <div class="img-desc position-relative">
+                            <div class="name d-flex justify-content-between">
+                                <span><%= b.getName() %></span>
+                                <span class="stocks">Available Stock: 
+                                    <span style="background: transparent;color: #000080;
+                                    font-size: 1.25vw;
+                                    font-weight: 400;" id="stock"><%= b.getStock() %></span>
+                                </span>
+                            </div>
+                            <div class="price">
+                                <span><i class="fa-solid fa-indian-rupee-sign"></i><%= b.getPrice() %></span>
+                            </div>
+                            <div class="confirm d-flex justify-content-between position-absolute"
+                            style="width: 40%;">
+                                <form style="padding: 0;"  class="col-12" action="orders.jsp" method="get">
+                                    <input type="hidden" name="id" value="<%= id %>">
+                                    <input type="hidden" name="img" value="<%= b.getImgUrl() %>">
+                                    <input type="hidden" name="name" value="<%= b.getName() %>">
+                                    <input type="hidden" name="price" value="<%= b.getPrice() %>">
+                                    <input type="hidden" name="stock" value="<%= b.getStock() %>">
+                                    <button type="submit">Buy Now</button>
+                                </form>
+                                <form action="../../removeCart">
+                                    <input type="hidden" name="id" value="<%= id %>">
+                                    <input type="hidden" name="email" value="<%= email %>">
+                                    <input type="hidden" name="name" value="<%= b.getName() %>">
+                                    <button type="submit">Remove</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+            <%  }
+            }
+        %>
         </div>  
         <div class="col-md-4 col-12" style="background-color: #84dbffd1;">
             <div class="total">
                 <div class="items d-flex justify-content-between">
-                    <span>ITEMS&nbsp<span id="item-count">1</span>:</span>
+                    <span>ITEMS&nbsp<span id="item-count"><%= cartCount %></span>:</span>
                     <span><i class="fa-solid fa-indian-rupee-sign"></i><%= price %></span>
                 </div>
                 <div class="delivery-charge d-flex justify-content-between">
@@ -54,7 +97,7 @@
                 </div>
                 <div class="items d-flex justify-content-between">
                     <span>TOTAL:</span>
-                    <span><i class="fa-solid fa-indian-rupee-sign" id="total-bill"></i>200</span>
+                    <span><i class="fa-solid fa-indian-rupee-sign" id="total-bill"></i><%= price %></span>
                 </div>
             </div>
             <p style="padding: 1vw;"><i class="fa-solid fa-square-check" 
