@@ -71,3 +71,15 @@ function quantity(x){
         }
     }
 }
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("file").addEventListener('change', function() {
+        let file = this.files[0];
+        let chooseFileLabel = document.getElementById('choose-file-label');
+
+        if (file) {
+            chooseFileLabel.innerText = file.name;
+        } else {
+            chooseFileLabel.innerText = "Choose File";
+        }
+    });
+});

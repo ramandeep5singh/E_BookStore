@@ -1,6 +1,6 @@
 <%@ page import="java.io.File" %>
-<%  
-    Cookie[] cookies = request.getCookies();
+  
+   <% Cookie[] cookies = request.getCookies();
     
     String email = "";
     String userName = (String)session.getAttribute("name");
@@ -13,9 +13,9 @@
                 email = cookie.getValue();
             }
         }
-    }
+    } 
     
-    int cartCount = 0;
+	int cartCount = 0;
 
     if(email!=""){
         String path = "C:\\Users\\Ramandeep Singh\\eclipse-workspace\\E_BookStore\\WebContent\\books\\cart\\"+email;

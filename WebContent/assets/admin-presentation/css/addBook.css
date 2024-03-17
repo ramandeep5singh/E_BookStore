@@ -62,6 +62,7 @@ input[type=number]::-webkit-outer-spin-button {
     background: transparent;
     outline: none;
     border: 2px solid #000080;
+    width: 100%;
 }
 .form-input button{
     outline: none;
@@ -83,10 +84,40 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .type{
     padding: 0 1vw;
+    display: flex;
+    align-items: center;
 }
 .type label{
     color: #000080;
     font-weight: bold;
+    font-size: 4vw;
+    padding: 0 1vw;
+}
+.choose-file{
+    background-color: #000080b3;
+    width: 80%;
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+.choose-file-back{
+    position: absolute;
+    width: 0;
+    background-color: #000080;
+    content: "";
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: 0.2s width ease-in-out;
+}
+.choose-file:hover .choose-file-back{
+    width: 100%;
 }
 .q-in{
     align-items: center;

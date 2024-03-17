@@ -7,9 +7,15 @@
     Cookie[] cookies = request.getCookies();
     
     String email = "";
-    String userName = (String)session.getAttribute("name");
-    String phone = (String)session.getAttribute("phone");
-    String address = (String)session.getAttribute("address");
+    String userName = "";
+    String phone = "";
+    String address = "";
+
+    if(session!=null){
+        userName = (String)session.getAttribute("name");
+        phone = (String)session.getAttribute("phone");
+        address = (String)session.getAttribute("address");
+    }
 
     if(cookies!=null){
         for(Cookie cookie : cookies){ 

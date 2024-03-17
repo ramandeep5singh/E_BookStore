@@ -76,15 +76,23 @@
     border: 3px solid #000080;
     padding: 2px;
 }
+.order-email{
+    margin-bottom: 1vw;
+    font-size: 1.5vw;
+    font-family: emoji;
+    font-weight: bold;
+    color: #000080;
+}
 .name span:first-child{
     font-size: 2vw;
     font-weight: bold;
     color: #000080;
     letter-spacing: 2px;
 }
-.stocks{
+.stocks span{
     color: #000080;
-    font-size: 1.25vw;
+    font-size: initial;
+    font-weight: normal;
 }
 .price span{
     font-size: 1.5vw;
@@ -92,9 +100,25 @@
     color: #000080;
 }
 .confirm{
-    bottom: 3vw;
-    transform: translateX(-50%);
-    left: 50%;
+    width: 100%;
+}
+.confirm button{
+    background-color: #000080;
+    padding: 0.5vw 1vw;
+    border: none;
+    border-radius: 0.5vw;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.confirm button:hover{
+    box-shadow: 0px 0px 6px 1px black;
+}
+.confirm span{
+    font-weight: bold;
+    font-size: x-large;
+    color: green;
 }
 .payment-method span{
     font-size: 2vw;
@@ -117,4 +141,17 @@
     font-weight: 600;
     font-size: 1.5vw;
     color: #000080;
+}
+.acknowledge-all button{
+    background-color: #000080;
+    padding: 0.5vw 1vw;
+    border: none;
+    border-radius: 0.5vw;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.acknowledge-all button:hover{
+    box-shadow: 0px 0px 6px 1px black;
 }

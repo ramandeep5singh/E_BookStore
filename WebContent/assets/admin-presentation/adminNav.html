@@ -1,0 +1,20 @@
+<div class="admin-logo">
+    <img src="../bookStoreLogo.png" alt="">
+</div>
+<div class="admin-heading d-flex justify-content-between">
+    <span>ADMIN</span>
+    <span class="position-relative" style="cursor: pointer;"
+    onclick="showLogout()"><i class="fa-solid fa-power-off"></i>
+        <a id="logout-button" class="position-absolute">Logout</a>
+    </span>
+</div>
+<div class="admin-task">
+    <ul>
+        <li id="l1" style="background-color: #000080;
+        color: white;" onclick="activeAdminTask(this)"><i class="fa-solid fa-house d-block"></i><span class="a-nav">DashBoard</span></li>
+        <li id="l2" onclick="activeAdminTask(this)"><i class="fa-solid fa-plus d-block"></i><span class="a-nav">Add Book</span></li>
+        <li id="l3" onclick="activeAdminTask(this)"><i class="fa-solid fa-sort d-block"></i><span class="a-nav">Orders</span></li>
+        <li id="l4" onclick="activeAdminTask(this)"><i class="fa-solid fa-road"></i><span class="a-nav">On The Way</span></li>
+        <li id="l5" onclick="activeAdminTask(this)"><i class="fa-solid fa-circle-check d-block"></i><span class="a-nav">Delivered</span></li>
+    </ul>
+</div>

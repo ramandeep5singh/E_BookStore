@@ -1,4 +1,4 @@
-.home{
+/* .home{
     height: 100%;
     align-items: center;
 }
@@ -17,4 +17,121 @@
 }
 .action button:hover{
     box-shadow: 0 0 8px 1px black;
+} */
+.admin-nav{
+    height: 100%;
+    background-color: #84dbffd1;
+    color: #000080;
+    box-shadow: 2px 0px 7px 1px black;
+}
+.admin-logo{
+    width: 36%;
+    height: 16%;
+}
+.admin-logo img{
+    width: 100%;
+    height: 100%;
+    padding: 1vw;
+}
+.admin-heading{
+    align-items: center;
+    padding: 1vw;
+}
+.admin-heading span{
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 2vw;
+}
+.admin-heading a{
+    left: -23px;
+    bottom: -23px;
+    color: black;
+    font-size: 1vw;
+    text-decoration: none;
+    background: white;
+    box-shadow: 0 0 3px 1px;
+    display: none;
+}
+.admin-task{
+    padding: 2vw;
+}
+.admin-task ul{
+    padding: 0;
+    list-style-type: none;
+}
+.admin-task i{
+    width: 20%;
+}
+.admin-task ul>li{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2vw;
+    padding: 0.5vw;
+    border-radius: 1vw;
+    cursor: pointer;
+    margin-bottom: 1.5vw;
+}
+
+/*dashboard styling*/
+.overview{
+    width: 100%;
+    padding: 1vw;
+}
+.dash-head{
+    width: 100%;
+    padding: 2vw;
+    align-items: center;
+    background-color: #000080;
+    color: white;
+    box-shadow: 0px 0px 6px 1px black;
+    margin: 0 2vw;
+}
+.head-name{
+    align-items: center;
+    font-weight: bold;
+    font-size: 2vw;
+}
+.head-name i{
+    padding: 1vw;
+    margin-right: 1vw;
+    background: white;
+    background-color: #84dbffd1;
+    border-radius: 50%;
+    color: #000080;
+}
+.head-count{
+    padding: 2vw;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.categories h1{
+    padding: 3vw;
+    color: #000080;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-family: none;
+}
+.book-table{
+    padding: 0 4vw;
+    margin-bottom: 4vw;
+}
+.book-name{
+    padding: 1vw;
+    color: #000080;
+    font-weight: bold;
+    background: #84dbffd1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.table-data{
+    padding: 1vw;
+    border-bottom: 2px solid #000080;
+}
+.table-data table{
+    width: 100%;
+    color: #000080;
+    font-weight: 600;
 }
