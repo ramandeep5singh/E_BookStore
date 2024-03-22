@@ -1,3 +1,17 @@
+<jsp:useBean id="bean" class="adminInitializationBean.AdminDashboardBean"></jsp:useBean>
+<%
+    session = request.getSession(false);
+    int sales = (Integer)session.getAttribute("sales");
+    int orders = (Integer)session.getAttribute("orders");
+    int products = (Integer)session.getAttribute("products");
+%>
+<%@ page import="adminInitializationBean.Type" %>
+<%
+    Type java = bean.getJava();
+    Type python = bean.getPython();
+    Type cpp = bean.getCpp();
+    Type c = bean.getC();
+%>
 <div class="overview d-flex">
     <div class="dash-head d-flex flex-column justify-content-between">
         <div class="head-name d-flex">
@@ -5,7 +19,7 @@
             <span>SALES</span>
         </div>
         <div class="head-count">
-            <span>65651</span>
+            <span><%= sales %></span>
         </div>
     </div>
     <div class="dash-head d-flex flex-column justify-content-between">
@@ -14,7 +28,7 @@
             <span>ORDERS</span>
         </div>
         <div class="head-count">
-            <span>654654</span>
+            <span><%= orders %></span>
         </div>
     </div>
     <div class="dash-head d-flex flex-column justify-content-between">
@@ -23,7 +37,7 @@
             <span>PRODUCTS</span>
         </div>
         <div class="head-count">
-            <span>654654</span>
+            <span><%= products %></span>
         </div>
     </div>
 </div>
@@ -40,15 +54,15 @@
                     <table>
                         <tr>
                             <td>SOLD</td>
-                            <td class="text-end">300</td>
+                            <td class="text-end"><%= java.getSold() %></td>
                         </tr>
                         <tr>
                             <td>ORDERS</td>
-                            <td class="text-end">198</td>
+                            <td class="text-end"><%= java.getOrders() %></td>
                         </tr>
                         <tr>
                             <td>ACKNOWLEDGED</td>
-                            <td class="text-end">369</td>
+                            <td class="text-end"><%= java.getAck() %></td>
                         </tr>
                     </table>
                 </div>
@@ -62,15 +76,15 @@
                     <table>
                         <tr>
                             <td>SOLD</td>
-                            <td class="text-end">300</td>
+                            <td class="text-end"><%= python.getSold() %></td>
                         </tr>
                         <tr>
                             <td>ORDERS</td>
-                            <td class="text-end">198</td>
+                            <td class="text-end"><%= python.getOrders() %></td>
                         </tr>
                         <tr>
                             <td>ACKNOWLEDGED</td>
-                            <td class="text-end">369</td>
+                            <td class="text-end"><%= python.getAck() %></td>
                         </tr>
                     </table>
                 </div>
@@ -86,15 +100,15 @@
                     <table>
                         <tr>
                             <td>SOLD</td>
-                            <td class="text-end">300</td>
+                            <td class="text-end"><%= cpp.getSold() %></td>
                         </tr>
                         <tr>
                             <td>ORDERS</td>
-                            <td class="text-end">198</td>
+                            <td class="text-end"><%= cpp.getOrders() %></td>
                         </tr>
                         <tr>
                             <td>ACKNOWLEDGED</td>
-                            <td class="text-end">369</td>
+                            <td class="text-end"><%= cpp.getAck() %></td>
                         </tr>
                     </table>
                 </div>
@@ -108,15 +122,15 @@
                     <table>
                         <tr>
                             <td>SOLD</td>
-                            <td class="text-end">300</td>
+                            <td class="text-end"><%= c.getSold() %></td>
                         </tr>
                         <tr>
                             <td>ORDERS</td>
-                            <td class="text-end">198</td>
+                            <td class="text-end"><%= c.getOrders() %></td>
                         </tr>
                         <tr>
                             <td>ACKNOWLEDGED</td>
-                            <td class="text-end">369</td>
+                            <td class="text-end"><%= c.getAck() %></td>
                         </tr>
                     </table>
                 </div>

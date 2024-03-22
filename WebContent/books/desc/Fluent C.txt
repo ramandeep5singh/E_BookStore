@@ -1,0 +1,15 @@
+Expert advice on C programming is hard to find. While much help is available for object-oriented programming languages, there's surprisingly little for the C language. With this hands-on guide, beginners and experienced C programmers alike will find guidance about design decisions, including how to apply them bit by bit to running code examples when building large-scale programs.
+
+Christopher Preschern, a leading member of the design patterns community, answers questions such as how to structure C programs, cope with error handling, or design flexible interfaces. Whether you're looking for one particular pattern or an overview of design options for a specific topic, this book shows you how to implement hands-on design knowledge specifically for the C programming language.
+
+You'll find design patterns for:
+
+Error handling
+Returning error information
+Memory management
+Returning data from C functions
+Data lifetime and ownership
+Flexible APIs
+Flexible iterator interfaces
+Organizing files in modular programs
+Escaping #ifdef Hell

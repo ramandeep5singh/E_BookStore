@@ -1,0 +1,20 @@
+Discover how to become a six-figure developer without going back to school.
+Are you thinking of transitioning into a career as a software developer?
+
+Have you always been interested in programming languages and tinkering with technology?
+
+Do you wish there was a straightforward way to gain all the skills and knowledge you need to write your own programs?
+
+If you're looking to make a living as a Java programmer, you're in luck.
+
+According to HackerRank, Java is now the third most in-demand language that hiring managers look for.
+
+And with US Java developers now earning upwards of $105,000 on average, based on data from Indeed... You can rest assured that learning Java will pay off in more ways than one.
+
+But for many, the problem is knowing where to start.
+
+If you're coming from a non-tech background... or if you're self-taught and only know bits and pieces of Java... then learning how to code can feel like flying blindfolded.
+
+Because even if you manage to grasp all the basic beginner concepts... you'll still need to ace your first coding challenge if you want to land your dream job as a developer.
+
+And that's where this book comes in.

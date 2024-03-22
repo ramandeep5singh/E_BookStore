@@ -108,13 +108,6 @@
     }
 </style>
 <body style="margin: 0;">
-    <section id="add-book" class="position-absolute" style="top: 0;
-    left: 0;
-    width: 100%;
-    display: none;
-    z-index: 10;">
-        <jsp:include page="assets/admin-presentation/addBook.jsp" />
-    </section>
     <div id="profile-card" class="profile-card position-absolute">
         <p style="top: 0;
         left: 0;" class="position-absolute"><i onclick="profileCard(2)" class="fa-solid fa-xmark"></i></p>

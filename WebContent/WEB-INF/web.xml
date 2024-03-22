@@ -57,7 +57,7 @@
   
   <servlet>
   	<servlet-name>addBook</servlet-name>
-  	<servlet-class>servletPack.AddBookServlet</servlet-class>
+  	<servlet-class>adminServletPack.AddBookServlet</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>addBook</servlet-name>
@@ -82,8 +82,36 @@
   	<url-pattern>/removeCart</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>admin</servlet-name>
+  	<servlet-class>adminServletPack.AdminRedirectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>admin</servlet-name>
+  	<url-pattern>/admin</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>admin-check</servlet-name>
+  	<servlet-class>adminServletPack.AdminInitializationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>admin-check</servlet-name>
+  	<url-pattern>/admin-check</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>acknowledge</servlet-name>
+  	<servlet-class>adminServletPack.AcknowledgeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>acknowledge</servlet-name>
+  	<url-pattern>/acknowledge</url-pattern>
+  </servlet-mapping>
+  
   <context-param>
   	<param-name>admin123</param-name>
   	<param-value>123admin</param-value>
   </context-param>
+  
 </web-app>

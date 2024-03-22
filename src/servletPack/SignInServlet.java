@@ -21,9 +21,7 @@ public class SignInServlet extends HttpServlet {
         String paramValue = context.getInitParameter("admin123");
         
         if(email.equals(admin) && password.equals(paramValue)) {
-        	HttpSession session = request.getSession();
-        	session.setAttribute("name", "admin");
-        	response.sendRedirect("index.jsp");
+        	response.sendRedirect("admin-check");
         }
         
         CredentialsBean b = new CredentialsBean();

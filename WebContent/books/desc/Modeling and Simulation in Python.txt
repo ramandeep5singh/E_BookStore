@@ -1,0 +1,5 @@
+Modeling and Simulation in Python teaches readers how to analyze real-world scenarios using the Python programming language, requiring no more than a background in high school math.
+
+Modeling and Simulation in Python is a thorough but easy-to-follow introduction to physical modeling?that is, the art of describing and simulating real-world systems. Readers are guided through modeling things like world population growth, infectious disease, bungee jumping, baseball flight trajectories, celestial mechanics, and more while simultaneously developing a strong understanding of fundamental programming concepts like loops, vectors, and functions.
+
+Clear and concise, with a focus on learning by doing, the author spares the reader abstract, theoretical complexities and gets right to hands-on examples that show how to produce useful models and simulations.
