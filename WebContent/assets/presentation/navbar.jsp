@@ -52,34 +52,28 @@ z-index: 10;">
 </section>
 <section class="nav position-relative">
     <div class="small-nav d-flex justify-content-between position-relative">
-        <div class="logo-categories d-flex">
+        <div class="logo-categories d-flex justify-content-between">
             <img src="assets/bookStoreLogo.png" alt="logo" />
-            <div class="categories">
-                <ul class="d-flex" style="margin: 0;">
-                    <li id="home-under" onclick="showContent(1)">
-                        <a class="position-relative">Home
-                            <div id="home-under1" class="category-bottom position-absolute" style="width: 100%;"></div>
-                        </a>
+            <div class="categories position-relative">
+                <span onclick="showCategories()">
+                    CATEGORIES&nbsp<i class="fa-solid fa-caret-down"></i>
+                </span>
+                <ul id="category-drop" class="position-absolute category-drop">
+                    <li onclick="showContent(1)" style="margin-top: 0;">
+                        <a id="home-under" class="position-relative" style="background-color: white;
+                        color: #000080;">Home</a>
                     </li>
-                    <li id="java-under" onclick="showContent(2)">
-                        <a class="position-relative">Java
-                            <div class="category-bottom position-absolute"></div>
-                        </a>
+                    <li onclick="showContent(2)">
+                        <a id="java-under" class="position-relative">Java</a>
                     </li>
-                    <li id="python-under" onclick="showContent(3)">
-                        <a class="position-relative">Python
-                            <div class="category-bottom position-absolute"></div>
-                        </a>
+                    <li onclick="showContent(3)">
+                        <a id="python-under" class="position-relative">Python</a>
                     </li>
-                    <li id="cpp-under" onclick="showContent(4)">
-                        <a class="position-relative">C++
-                            <div class="category-bottom position-absolute"></div>
-                        </a>
+                    <li onclick="showContent(4)">
+                        <a id="cpp-under" class="position-relative">C++</a>
                     </li>
-                    <li id="c-under" onclick="showContent(5)" style="padding: 0 2px;">
-                        <a class="position-relative">C
-                            <div class="category-bottom position-absolute"></div>
-                        </a>
+                    <li onclick="showContent(5)" style="margin-bottom: 0;">
+                        <a id="c-under" class="position-relative">C</a>
                     </li>
                 </ul>
             </div>

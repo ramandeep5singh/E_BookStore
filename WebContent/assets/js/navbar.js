@@ -1,3 +1,16 @@
+let check = 0;
+function showCategories(){
+    if(check==0){
+        document.getElementById("category-drop").style.display = "block";
+        console.log(check);
+        check++;
+    }
+    else{
+        document.getElementById("category-drop").style.display = "none";
+        console.log(check);
+        check--;
+    }
+}
 function showContent(x){
     let carousel = document.getElementById("book-carousel");
     let carouselSlide = document.getElementById("carousel-slide");
@@ -7,11 +20,13 @@ function showContent(x){
     let c = document.getElementById("c-books");
 
     let homeUnder = document.getElementById("home-under");
-    let homeUnder1 = document.getElementById("home-under1");
     let javaUnder = document.getElementById("java-under");
     let pythonUnder = document.getElementById("python-under");
     let cppUnder = document.getElementById("cpp-under");
     let cUnder = document.getElementById("c-under");
+
+    document.getElementById("category-drop").style.display = "none";
+    check=0;
 
     switch(x){
         case 1:
@@ -23,12 +38,16 @@ function showContent(x){
             cpp.style.display = "none";
             c.style.display = "none";
 
-            homeUnder.style.borderBottom = "3px solid red";
-            homeUnder1.style.borderBottom = "none";
-            javaUnder.style.borderBottom = "none";
-            pythonUnder.style.borderBottom = "none";
-            cppUnder.style.borderBottom = "none";
-            cUnder.style.borderBottom = "none";
+            homeUnder.style.backgroundColor = "white";
+            homeUnder.style.color = "#000080";
+            javaUnder.style.backgroundColor = "";
+            javaUnder.style.color = "";
+            pythonUnder.style.backgroundColor = "";
+            pythonUnder.style.color = "";
+            cppUnder.style.backgroundColor = "";
+            cppUnder.style.color = "";
+            cUnder.style.backgroundColor = "";
+            cUnder.style.color = "";
             break;
 
         case 2:
@@ -39,12 +58,16 @@ function showContent(x){
             cpp.style.display = "none";
             c.style.display = "none";
 
-            homeUnder.style.borderBottom = "none";
-            homeUnder1.style.borderBottom = "none";
-            javaUnder.style.borderBottom = "3px solid red";
-            pythonUnder.style.borderBottom = "none";
-            cppUnder.style.borderBottom = "none";
-            cUnder.style.borderBottom = "none";
+            homeUnder.style.backgroundColor = "";
+            homeUnder.style.color = "";
+            javaUnder.style.backgroundColor = "white";
+            javaUnder.style.color = "#000080";
+            pythonUnder.style.backgroundColor = "";
+            pythonUnder.style.color = "";
+            cppUnder.style.backgroundColor = "";
+            cppUnder.style.color = "";
+            cUnder.style.backgroundColor = "";
+            cUnder.style.color = "";
             break;
 
         case 3:
@@ -55,12 +78,16 @@ function showContent(x){
             cpp.style.display = "none";
             c.style.display = "none";
 
-            homeUnder.style.borderBottom = "none";
-            homeUnder1.style.borderBottom = "none";
-            javaUnder.style.borderBottom = "none";
-            pythonUnder.style.borderBottom = "3px solid red";
-            cppUnder.style.borderBottom = "none";
-            cUnder.style.borderBottom = "none";
+            homeUnder.style.backgroundColor = "";
+            homeUnder.style.color = "";
+            javaUnder.style.backgroundColor = "";
+            javaUnder.style.color = "";
+            pythonUnder.style.backgroundColor = "white";
+            pythonUnder.style.color = "#000080";
+            cppUnder.style.backgroundColor = "";
+            cppUnder.style.color = "";
+            cUnder.style.backgroundColor = "";
+            cUnder.style.color = "";
             break;
 
         case 4:
@@ -71,12 +98,16 @@ function showContent(x){
             cpp.style.display = "block";
             c.style.display = "none";
 
-            homeUnder.style.borderBottom = "none";
-            homeUnder1.style.borderBottom = "none";
-            javaUnder.style.borderBottom = "none";
-            pythonUnder.style.borderBottom = "none";
-            cppUnder.style.borderBottom = "3px solid red";
-            cUnder.style.borderBottom = "none";
+            homeUnder.style.backgroundColor = "";
+            homeUnder.style.color = "";
+            javaUnder.style.backgroundColor = "";
+            javaUnder.style.color = "";
+            pythonUnder.style.backgroundColor = "";
+            pythonUnder.style.color = "";
+            cppUnder.style.backgroundColor = "white";
+            cppUnder.style.color = "#000080";
+            cUnder.style.backgroundColor = "";
+            cUnder.style.color = "";
             break;
         
         case 5:
@@ -87,12 +118,16 @@ function showContent(x){
             cpp.style.display = "none";
             c.style.display = "block";
 
-            homeUnder.style.borderBottom = "none";
-            homeUnder1.style.borderBottom = "none";
-            javaUnder.style.borderBottom = "none";
-            pythonUnder.style.borderBottom = "none";
-            cppUnder.style.borderBottom = "none";
-            cUnder.style.borderBottom = "3px solid red";
+            homeUnder.style.backgroundColor = "";
+            homeUnder.style.color = "";
+            javaUnder.style.backgroundColor = "";
+            javaUnder.style.color = "";
+            pythonUnder.style.backgroundColor = "";
+            pythonUnder.style.color = "";
+            cppUnder.style.backgroundColor = "";
+            cppUnder.style.color = "";
+            cUnder.style.backgroundColor = "white";
+            cUnder.style.color = "#000080";
             break;
     }
 }

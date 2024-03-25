@@ -119,9 +119,9 @@
         </div>
         <a class="d-none" href="update.jsp">Update</a>
     </div>
-	<section id="scroll-nav" class="scroll-nav">
+	<!-- <section id="scroll-nav" class="scroll-nav">
         <jsp:include page="assets/presentation/navbar.jsp" />
-    </section>
+    </section> -->
 	<section class="position-absolute" style="width: 100%; top: 0; height: 100%;">
 		<jsp:include page="assets/presentation/navbar.jsp" />
 	<%  if(userName==null || !userName.equals("admin")){ %> 

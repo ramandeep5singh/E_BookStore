@@ -29,11 +29,19 @@
     </script>
     <body>
         <div class="logo position-fixed">
-            <h1>E_BookStore (ADMIN)</h1>
+            <h1>E_BookStore&nbsp
+                <% if(type!=null){ %>
+                    (ADMIN)
+                <% } %>
+            </h1>
         </div>
         <section class="login-card d-flex justify-content-center">
             <div class="card position-relative">
-                <h3>Admin Login</h3>
+                <h3>Login&nbsp
+                    <% if(type!=null){ %>
+                        (ADMIN)
+                    <% } %>
+                </h3>
                 <div id="customer-login" class="login position-absolute">
                     <%  if(type==null){ %>
                         <form class="position-relative" action="login" style="height: 100%;" 
