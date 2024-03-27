@@ -23,7 +23,7 @@ width: 100%;">
                 Book book = entry.getValue();
         %>
             <div class="book d-flex flex-column col-md-4 col-sm-6">
-                <img src="books/images/Head_First.jpg" alt="" style="align-self:center;">
+                <img src="<%= book.getImgUrl() %>" alt="" style="align-self:center;">
                 <span><%= book.getName() %></span>
                 <span>Rs. <%= book.getPrice() %></span>
                 <!-- <div class="buy-check row">
