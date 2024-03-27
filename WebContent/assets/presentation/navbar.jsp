@@ -58,6 +58,9 @@ z-index: 10;">
                 <span onclick="showCategories()">
                     CATEGORIES&nbsp<i class="fa-solid fa-caret-down"></i>
                 </span>
+                <span onclick="window.location.href='assets/presentation/userOrders.jsp'">
+                    MY ORDERS
+                </span>
                 <ul id="category-drop" class="position-absolute category-drop">
                     <li onclick="showContent(1)" style="margin-top: 0;">
                         <a id="home-under" class="position-relative" style="background-color: white;

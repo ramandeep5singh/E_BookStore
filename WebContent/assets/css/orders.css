@@ -93,8 +93,6 @@
 }
 .confirm{
     bottom: 3vw;
-    transform: translateX(-50%);
-    left: 50%;
 }
 .confirm form>button{
     background-color: #000080;
@@ -126,4 +124,10 @@
     font-weight: 600;
     font-size: 1.5vw;
     color: #000080;
+}
+.order-item{
+    margin-bottom: 5vw;
+    background: #8080803d;
+    padding: 1.5vw;
+    border-radius: 1vw;
 }

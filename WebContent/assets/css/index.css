@@ -43,7 +43,7 @@
 }
 .logo-categories{
 	align-items: center;
-	width: 25%;
+	width: 40%;
 }
 .categories span{
 	font-size: 1.5vw;
@@ -51,6 +51,7 @@
     letter-spacing: 0.2vw;
     cursor: pointer;
 	color: #000080;
+	margin: 0 1vw;
 }
 .category-drop{
 	margin: 0; 
