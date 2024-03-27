@@ -1,4 +1,4 @@
-.b-disp{
+/* .b-disp{
     align-items: center;
     border: 0.25vw solid #000080;
     cursor: pointer;
@@ -32,4 +32,72 @@
     border-radius: 4px;
     margin: 0 1vw;
     cursor: pointer;
+} */
+
+.carousel{
+    height: 44vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1vw;
+}
+.slide{
+    margin: 3vw 10vw;
+    border: 2px solid #000080;
+    display: flex;
+    transition: display 0.2s ease-in-out;
+    border-radius: 2vw;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 2px;
+    height: 100%;
+}
+.slide-item-img{
+    padding: 2vw;
+}
+.slide-item-info{
+    background-color: #8080803d;
+}
+.slide-description{
+    padding: 3vw;
+    overflow: hidden;
+    max-height: 60%;
+}
+.slide-more-info{
+    height: 50%;
+    font-size: 2.5vw;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background: linear-gradient(360deg, #000080 0%, #00008069 80%, #00000000 100%);
+    width: 100%;
+    color: white;
+    bottom: 0;
+    cursor: pointer;
+}
+.item-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.item-img img{
+    width: 50%;
+    box-shadow: 0px 0px 10px 2px;
+}
+.item-price{
+    text-align: center;
+    padding: 1vw;
+    font-size: 3vw;
+    font-weight: 600;
+    color: #000080;
+    letter-spacing: 3px;
+}
+.slide-button{
+    margin-bottom: 2vw;
+}
+.slide-button div{
+    content: "";
+    width: 1.5vw;
+    height: 8px;
+    background-color: black;
+    border-radius: 1vw;
+    margin: 0 1vw;
 }

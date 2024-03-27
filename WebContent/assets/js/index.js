@@ -1,24 +1,24 @@
-window.addEventListener("scroll",function(){
-	var scrollPosition = window.scrollY;
+// window.addEventListener("scroll",function(){
+// 	var scrollPosition = window.scrollY;
 
-	if(scrollPosition >= 400){
-		downNav(1);
-	}
-	else{
-		downNav(2);
-	}
-});
-function downNav(x){
-	let scrollNav = document.getElementById("scroll-nav");
+// 	if(scrollPosition >= 400){
+// 		downNav(1);
+// 	}
+// 	else{
+// 		downNav(2);
+// 	}
+// });
+// function downNav(x){
+// 	let scrollNav = document.getElementById("scroll-nav");
 
-	if(x==1){
-		scrollNav.style.top = "0";
-		scrollNav.style.position = "fixed";
-		scrollNav.style.transition = "top 0.5s ease-in-out";
-	}
-	else{
-		scrollNav.style.top = "-15vw";
-		scrollNav.style.position = "absolute";
-		scrollNav.style.transition = "top 0.5s ease-in-out";
-	}
-}
+// 	if(x==1){
+// 		scrollNav.style.top = "0";
+// 		scrollNav.style.position = "fixed";
+// 		scrollNav.style.transition = "top 0.5s ease-in-out";
+// 	}
+// 	else{
+// 		scrollNav.style.top = "-15vw";
+// 		scrollNav.style.position = "absolute";
+// 		scrollNav.style.transition = "top 0.5s ease-in-out";
+// 	}
+// }
