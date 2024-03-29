@@ -17,13 +17,8 @@ public class PlaceOrderServlet extends HttpServlet {
         String bookId = request.getParameter("id");
         String email = request.getParameter("email");
         String status = request.getParameter("status");
-        String quantity = "1";
-        if(request.getParameter("quantity1")!=null) {
-        	quantity = request.getParameter("quantity1");
-        }
-        else if(request.getParameter("quantity2")!=null) {
-        	quantity = request.getParameter("quantity");
-        }
+        String quantity = request.getParameter("quantity");
+        String payment = request.getParameter("payment");
         
         PlaceOrderBean po = new PlaceOrderBean();
         
@@ -31,6 +26,7 @@ public class PlaceOrderServlet extends HttpServlet {
         po.setEmail(email);
         po.setQuantity(Integer.parseInt(quantity));
         po.setStatus(Integer.parseInt(status));
+        po.setPayment(Integer.parseInt(status));
         
         if(po.order()) {
 //        	out.print("<p style='color: red; position: absolute; "

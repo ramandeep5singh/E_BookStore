@@ -7,31 +7,9 @@ import java.util.*;
 import java.sql.*;
 
 public class DisplayBooksBean {
-//	private int bookId;
-//	private String name;
-//	private int price;
-//	private int stock;
-//	private String imgUrl;
-	
 	PreparedStatement ps;
 	ResultSet rs;
 	Connection con;
-	
-//	public void setBookId(int bookId) {
-//		this.bookId = bookId;
-//	}
-//	public void setName(String name) {
-//		this.name = name;
-//	}
-//	public void setPrice(int price) {
-//		this.price = price;
-//	}
-//	public void setStock(int stock) {
-//		this.stock = stock;
-//	}
-//	public void setImgUrl(String imgUrl) {
-//		this.imgUrl = imgUrl;
-//	}
 	
 	public HashMap<Integer,Book> getJavaBooks() {
 		HashMap<Integer,Book> h = new HashMap<>();

@@ -27,6 +27,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/orders.css">
+    <script src="../js/userOrders.js"></script>
     <title>E_BookStore</title>
 </head>
 <body>
@@ -94,8 +95,8 @@
                             <div class="confirm d-flex justify-content-center">
                                 <form style="padding: 0;" action="../../cancelOrder" method="get">
                                     <input type="hidden" name="id" value="<%= b.getOrderId() %>">
-                                    <input type="hidden" name="status" value="<%= b.getStatus() %>">
-                                    <button type="submit" style="width: 100%;">Cancel</button>
+                                    <input type="hidden" name="status" value="<%= b.getStatus() %>" id="status">
+                                    <button type="submit" style="width: 100%;" id="cancelOrder">Cancel</button>
                                 </form>
                             </div>
                         </div>

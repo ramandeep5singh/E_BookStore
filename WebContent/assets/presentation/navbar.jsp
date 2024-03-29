@@ -50,7 +50,7 @@ z-index: 10;">
         <%  } %>
     </div>
 </section>
-<section class="nav position-relative">
+<section class="nav position-relative" style="padding: 1vw 6vw;">
     <div class="small-nav d-flex justify-content-between position-relative">
         <div class="logo-categories d-flex justify-content-between">
             <img src="assets/bookStoreLogo.png" alt="logo" />

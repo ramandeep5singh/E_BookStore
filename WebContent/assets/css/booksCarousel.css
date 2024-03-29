@@ -64,14 +64,19 @@
 }
 .slide-more-info{
     height: 50%;
+    background: linear-gradient(360deg, #000080 0%, #00008069 80%, #00000000 100%);
+    width: 100%;
+    bottom: 0;
+}
+.smi-button{
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
     font-size: 2.5vw;
     font-weight: bold;
     letter-spacing: 3px;
-    background: linear-gradient(360deg, #000080 0%, #00008069 80%, #00000000 100%);
-    width: 100%;
-    color: white;
-    bottom: 0;
-    cursor: pointer;
+    background: none;
 }
 .item-img{
     width: 100%;

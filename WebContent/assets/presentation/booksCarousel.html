@@ -7,17 +7,30 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/booksCarousel.css">
-    <script src="assets/js/booksCarousel.js"></script>
+    <!-- <script src="assets/js/booksCarousel.js"></script> -->
 </head>
 <body>
-    <section class="carousel">
+    <section id="carousel" class="carousel">
         <section id="s1" class="slide" style="display: none;">
             <section class="slide-item-info position-relative col-6">
                 <div class="slide-description">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit sed quibusdam, labore necessitatibus, minus sapiente assumenda debitis voluptates culpa iusto, ex ea minima facere sequi praesentium dolor eaque quo! Tempora id adipisci, dolorum harum voluptates illum expedita quod, explicabo aperiam laudantium est commodi optio itaque nulla! Ab adipisci quo quidem amet, natus error repellat pariatur fuga dolore magnam sapiente consequuntur sit id facilis odio asperiores quasi dolorem ipsa delectus iusto non explicabo. Tempora nemo quam magni veniam ab. Maxime nostrum pariatur obcaecati tempora, impedit amet architecto error corrupti aspernatur accusamus itaque exercitationem rerum modi harum voluptates. Culpa, fugiat explicabo.</p>
                 </div>
                 <div class="slide-more-info position-absolute d-flex justify-content-center align-items-center">
-                    <span>More Info&nbsp<i class="fa-solid fa-arrow-right"></i></span>
+                    <form action="assets/presentation/bookDetails.jsp" method="get" style="display: flex;
+                    justify-content: center;">
+                        <input type="hidden" name="id" value="<%= key %>">
+                        <input type="hidden" name="name" value="<%= book.getName() %>">
+                        <input type="hidden" name="price" value="<%= book.getPrice() %>">
+                        <input type="hidden" name="img-url" value="<%= book.getImgUrl() %>">
+                        <input type="hidden" name="type" value="<%= book.getType() %>">
+                        <input type="hidden" name="author" value="<%= book.getAuthor() %>">
+                        <input type="hidden" name="publisher" value="<%= book.getPublisher() %>">
+                        <input type="hidden" name="description" value="<%= book.getDescription() %>">
+                        <input type="hidden" name="edition" value="<%= book.getEdition() %>">
+                        <input type="hidden" name="stock" value="<%= book.getStock() %>">
+                        <button class="smi-button" type="submit">More Info&nbsp<i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
                 </div>
             </section>
             <section class="slide-item-img d-flex flex-column justify-content-center col-6">
@@ -35,7 +48,20 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit sed quibusdam, labore necessitatibus, minus sapiente assumenda debitis voluptates culpa iusto, ex ea minima facere sequi praesentium dolor eaque quo! Tempora id adipisci, dolorum harum voluptates illum expedita quod, explicabo aperiam laudantium est commodi optio itaque nulla! Ab adipisci quo quidem amet, natus error repellat pariatur fuga dolore magnam sapiente consequuntur sit id facilis odio asperiores quasi dolorem ipsa delectus iusto non explicabo. Tempora nemo quam magni veniam ab. Maxime nostrum pariatur obcaecati tempora, impedit amet architecto error corrupti aspernatur accusamus itaque exercitationem rerum modi harum voluptates. Culpa, fugiat explicabo.</p>
                 </div>
                 <div class="slide-more-info position-absolute d-flex justify-content-center align-items-center">
-                    <span>More Info&nbsp<i class="fa-solid fa-arrow-right"></i></span>
+                    <form action="assets/presentation/bookDetails.jsp" method="get" style="display: flex;
+                    justify-content: center;">
+                        <input type="hidden" name="id" value="<%= key %>">
+                        <input type="hidden" name="name" value="<%= book.getName() %>">
+                        <input type="hidden" name="price" value="<%= book.getPrice() %>">
+                        <input type="hidden" name="img-url" value="<%= book.getImgUrl() %>">
+                        <input type="hidden" name="type" value="<%= book.getType() %>">
+                        <input type="hidden" name="author" value="<%= book.getAuthor() %>">
+                        <input type="hidden" name="publisher" value="<%= book.getPublisher() %>">
+                        <input type="hidden" name="description" value="<%= book.getDescription() %>">
+                        <input type="hidden" name="edition" value="<%= book.getEdition() %>">
+                        <input type="hidden" name="stock" value="<%= book.getStock() %>">
+                        <button class="smi-button" type="submit">More Info&nbsp<i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
                 </div>
             </section>
             <section class="slide-item-img d-flex flex-column justify-content-center col-6">
@@ -53,7 +79,20 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit sed quibusdam, labore necessitatibus, minus sapiente assumenda debitis voluptates culpa iusto, ex ea minima facere sequi praesentium dolor eaque quo! Tempora id adipisci, dolorum harum voluptates illum expedita quod, explicabo aperiam laudantium est commodi optio itaque nulla! Ab adipisci quo quidem amet, natus error repellat pariatur fuga dolore magnam sapiente consequuntur sit id facilis odio asperiores quasi dolorem ipsa delectus iusto non explicabo. Tempora nemo quam magni veniam ab. Maxime nostrum pariatur obcaecati tempora, impedit amet architecto error corrupti aspernatur accusamus itaque exercitationem rerum modi harum voluptates. Culpa, fugiat explicabo.</p>
                 </div>
                 <div class="slide-more-info position-absolute d-flex justify-content-center align-items-center">
-                    <span>More Info&nbsp<i class="fa-solid fa-arrow-right"></i></span>
+                    <form action="assets/presentation/bookDetails.jsp" method="get" style="display: flex;
+                    justify-content: center;">
+                        <input type="hidden" name="id" value="<%= key %>">
+                        <input type="hidden" name="name" value="<%= book.getName() %>">
+                        <input type="hidden" name="price" value="<%= book.getPrice() %>">
+                        <input type="hidden" name="img-url" value="<%= book.getImgUrl() %>">
+                        <input type="hidden" name="type" value="<%= book.getType() %>">
+                        <input type="hidden" name="author" value="<%= book.getAuthor() %>">
+                        <input type="hidden" name="publisher" value="<%= book.getPublisher() %>">
+                        <input type="hidden" name="description" value="<%= book.getDescription() %>">
+                        <input type="hidden" name="edition" value="<%= book.getEdition() %>">
+                        <input type="hidden" name="stock" value="<%= book.getStock() %>">
+                        <button class="smi-button" type="submit">More Info&nbsp<i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
                 </div>
             </section>
             <section class="slide-item-img d-flex flex-column justify-content-center col-6">

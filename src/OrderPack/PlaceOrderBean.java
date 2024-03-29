@@ -9,6 +9,7 @@ public class PlaceOrderBean {
 	private String email;
 	private int status;
 	private int quantity;
+	private int payment;
 	
 	PreparedStatement ps;
 	ResultSet rs;
@@ -28,6 +29,9 @@ public class PlaceOrderBean {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+	public void setPayment(int payment) {
+		this.payment = payment;
+	}
 	
 	public boolean order() {
 		con = Connect.getConnection();
@@ -44,30 +48,29 @@ public class PlaceOrderBean {
 			}
 			
 			ps = con.prepareStatement("insert into orders (book_id,email,status"
-					+ ",quantity) values (?,?,?,?);");
+					+ ",quantity,payment) values (?,?,?,?,?);");
 			ps.setInt(1, bookId);
 			ps.setString(2, email);
 			ps.setInt(3, status);
 			ps.setInt(4, quantity);
+			ps.setInt(5, payment);
 			ps.executeUpdate();
 			
-			if(status==1) {
-				ps = con.prepareStatement("select stock from books where "
-						+ "book_id = ?;");
-				ps.setInt(1, bookId);
-				rs = ps.executeQuery();
-				
-				int stock = 0;
-				while(rs.next()) {
-					stock = rs.getInt("stock")-quantity;
-				}
-				
-				ps = con.prepareStatement("update books"
-						+ " set stock=? where book_id=?");
-				ps.setInt(1, stock);
-				ps.setInt(2, bookId);
-				ps.executeUpdate();
+			ps = con.prepareStatement("select stock from books where "
+					+ "book_id = ?;");
+			ps.setInt(1, bookId);
+			rs = ps.executeQuery();
+			
+			int stock = 0;
+			if(rs.next()) {
+				stock = rs.getInt("stock")-quantity;
 			}
+			
+			ps = con.prepareStatement("update books"
+					+ " set stock=? where book_id=?");
+			ps.setInt(1, stock);
+			ps.setInt(2, bookId);
+			ps.executeUpdate();
 			
 			return true;
 		}

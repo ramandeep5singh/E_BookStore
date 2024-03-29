@@ -110,8 +110,12 @@ function showConfirm(){
     let quantity = document.getElementById("quantity").value;
 
     document.getElementById("quantity1").value = quantity;
-    document.getElementById("quantity2").value = quantity;
     document.getElementById("item-count").textContent = quantity;
     document.getElementById("total-bill").textContent = quantity+document.getElementById("item-count").textContent;
 
+}
+
+function setPayment(x){
+    document.getElementById("payment").value = x;
+    console.log(document.getElementById("payment").value);
 }

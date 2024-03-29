@@ -1,4 +1,4 @@
-<%@ page import="java.io.File" %>
+<%@ page import="java.io.*" %>
 <%
     response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
     response.setHeader("Pragma", "no-cache"); // HTTP 1.0
@@ -79,6 +79,9 @@
     String imgUrl = request.getParameter("img");
     String price = request.getParameter("price");
     String stock = request.getParameter("stock");
+
+    int delivery = 0;
+    int totalPrice = delivery+Integer.parseInt(price);
     
     Cookie[] cookies = request.getCookies();
     
@@ -243,7 +246,7 @@
                 <div id="order-summary" class="card-content" style="padding: 1vw; display: none;">
                     <div class="book-selected">
                         <div class="img">
-                            <img src="../../books/images/Head_First.jpg" alt="">
+                            <img src="../../<%= imgUrl %>" alt="">
                         </div>
                         <div class="q-in d-flex justify-content-center">
                             <i class="fa-solid fa-minus" onclick="quantity(2)" style="cursor: pointer;"></i>
@@ -279,25 +282,19 @@
                 <div id="payment-mode" class="card-content" style="padding: 2vw;
                 display: none;"> <!--d-flex justify-content-evenly-->
                     <div class="payment-method">
-                        <input type="radio" name="online" id=""><span>&nbspPay Online</span>
+                        <input type="radio" name="payment" id="online" disabled onchange="setPayment(2)"><label for="online" onclick="alert('Currently Unavailable!!')">&nbspPay Online</label>
                     </div>
                     <div class="payment-method">
-                        <input type="radio" name="cash" id=""><span>&nbspCash on Delivery</span>
+                        <input type="radio" name="payment" id="cash" onchange="setPayment(1)"><label for="cash">&nbspCash on Delivery</label>
                     </div>
                     <div class="payment-method">
                         <form action="../../placeOrder" method="get">
                             <input type="hidden" name="id" value="<%= id %>">
                             <input type="hidden" name="email" value="<%= email %>">
                             <input type="hidden" name="status" value="1">
-                            <input type="hidden" name="quantity1" value="1">
+                            <input type="hidden" name="quantity" value="1" id="quantity1">
+                            <input type="hidden" name="payment" value="" id="payment">
                             <button type="submit" class="change-button" style="margin: 0;">Buy Now</button>
-                        </form>
-                        <form action="../../placeOrder" method="get">
-                            <input type="hidden" name="id" value="<%= id %>">
-                            <input type="hidden" name="email" value="<%= email %>">
-                            <input type="hidden" name="status" value="0">
-                            <input type="hidden" name="quantity2" value="1">
-                            <button type="submit" class="change-button" style="margin: 0;">Add to Cart</button>
                         </form>
                     </div>
                 </div>
@@ -315,7 +312,7 @@
                 </div>
                 <div class="items d-flex justify-content-between">
                     <span>TOTAL:</span>
-                    <span><i class="fa-solid fa-indian-rupee-sign" id="total-bill"></i>200</span>
+                    <span><i class="fa-solid fa-indian-rupee-sign" id="total-bill"></i><%= totalPrice %></span>
                 </div>
             </div>
             <p><i class="fa-solid fa-square-check" 
