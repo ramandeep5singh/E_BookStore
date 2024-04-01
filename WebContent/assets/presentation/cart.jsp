@@ -81,7 +81,10 @@
                             </div>
                         </div>
                     </div>
-            <%  }
+            <%  
+                fileIn.close();
+                os.close();
+                }
             }
         %>
         </div>  

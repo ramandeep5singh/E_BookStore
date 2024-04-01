@@ -1,15 +1,10 @@
-"Head First Java" is a popular introductory book to the Java programming language, written by Kathy Sierra and Bert Bates. It's known for its engaging and interactive approach to teaching Java concepts to beginners. The book covers fundamental Java topics such as object-oriented programming, inheritance, polymorphism, and more, using a combination of humor, puzzles, quizzes, and real-world examples to reinforce learning.
+Computer programming language Java is not easy to understand. It takes lot of time and practice to understand the complex programming language. But this book takes an interactive and fun approach for better understanding of different fundamentals of Java. The book offers multi-sensory and fun learning experience for new programmers, so they can easily pick up the new language.
 
-Key features of "Head First Java" include:
+Human brain responds and remembers unusual situations, images or incidents. Keeping that in mind, this revised second edition of the book has been presented with lots of humorous images, memorable analogies and mind-bending exercises. The language in which the book is written is also casual for better understanding of the difficult computer programming language.
 
-1. Interactive Learning: The book encourages active participation from readers through exercises, puzzles, and quizzes, making the learning process more engaging and memorable.
+Although it follows a causal approach, the book refers to some serious computer-related information that encourages readers to learn and think like professional Java programmers. The book focuses on Java 5.0, the latest version of the Java development platform, along with certain deep code-levels. From basic programming fundamentals to advanced topics, including threads, distributed programming with RMI and network sockets, the book covers almost all major Java concepts.
 
-2. Visual Presentation: It employs a visually rich format with diagrams, illustrations, and examples to help readers understand complex Java concepts intuitively.
+To make the learning and remembering tasks easier, the book comes with numerous puzzles, striking visuals, mysterious problems and certain soul-searching interviews to make the computer programming more engaging and playful. For new programmers and those who want to brush up their programming knowledge, this book may be a good companion. With this easy-to-understand book, learning complex computer language shall no more be a difficult task.
 
-3. Real-World Examples: "Head First Java" presents Java concepts in the context of real-world scenarios, helping readers understand how to apply their knowledge to practical programming tasks.
-
-4. Progressive Learning: The content is structured in a progressive manner, starting with basic concepts and gradually moving to more advanced topics, making it suitable for beginners with no prior programming experience.
-
-5. Focus on Object-Oriented Programming: The book emphasizes the principles of object-oriented programming (OOP) and demonstrates how to design and implement Java programs using OOP principles effectively.
-
-Overall, "Head First Java" is highly regarded for its approachable style, comprehensive coverage of Java fundamentals, and focus on active learning, making it an excellent resource for individuals looking to learn Java programming from scratch.
+About the Author
+A well known game developer and programming instructor, Kathy Sierra is a master java trainer. She has been teaching instructors at Sun Microsystems on the best ways to teach the latest and upcoming Java technologies.

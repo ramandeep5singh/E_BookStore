@@ -1,6 +1,10 @@
 package OrderPack;
 
 import java.sql.*;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import connection.Connect;
 
@@ -10,6 +14,11 @@ public class PlaceOrderBean {
 	private int status;
 	private int quantity;
 	private int payment;
+	private String name;
+	private String cartPath = "C:\\Users\\Ramandeep Singh\\eclipse-workspace\\"
+			+ "E_BookStore\\WebContent\\books\\cart";
+	
+	public String exc;
 	
 	PreparedStatement ps;
 	ResultSet rs;
@@ -47,6 +56,14 @@ public class PlaceOrderBean {
 				return false;
 			}
 			
+			ps = con.prepareStatement("select name from books where book_id = ?");
+			ps.setInt(1,bookId);
+			rs = ps.executeQuery();
+			
+			if(rs.next()) {
+				name = rs.getString("name");
+			}
+			
 			ps = con.prepareStatement("insert into orders (book_id,email,status"
 					+ ",quantity,payment) values (?,?,?,?,?);");
 			ps.setInt(1, bookId);
@@ -72,7 +89,21 @@ public class PlaceOrderBean {
 			ps.setInt(2, bookId);
 			ps.executeUpdate();
 			
-			return true;
+			String bookPath = cartPath + File.separator + email + File.separator + 
+					name + bookId + ".ser";	
+			Path filePath = Paths.get(bookPath);
+	        try {
+	            Files.delete(filePath);
+	            return true;
+	        } catch (IOException e) {
+	        	StringWriter sw = new StringWriter();
+	            PrintWriter pw = new PrintWriter(sw);
+	            e.printStackTrace(pw);
+	            this.exc = sw.toString();
+	            flag = 2;
+	        }
+	        
+	        return false;
 		}
 		catch(SQLException e) {}
 		finally {

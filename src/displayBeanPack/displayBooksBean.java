@@ -38,7 +38,7 @@ public class DisplayBooksBean {
 				Book b = new Book(rs.getString("name"),rs.getInt("price"),
 						rs.getInt("stock"),rs.getString("img_url"),
 						rs.getString("type"),rs.getString("author"),
-						detailDesc,rs.getString("publisher"),
+						rs.getString("publisher"),detailDesc,
 						rs.getString("edition"));
 				h.put(rs.getInt("book_id"), b);
 				
@@ -85,7 +85,7 @@ public class DisplayBooksBean {
 				Book b = new Book(rs.getString("name"),rs.getInt("price"),
 						rs.getInt("stock"),rs.getString("img_url"),
 						rs.getString("type"),rs.getString("author"),
-						detailDesc,rs.getString("publisher"),
+						rs.getString("publisher"),detailDesc,
 						rs.getString("edition"));
 				h.put(rs.getInt("book_id"), b);
 			}
@@ -130,7 +130,7 @@ public class DisplayBooksBean {
 				Book b = new Book(rs.getString("name"),rs.getInt("price"),
 						rs.getInt("stock"),rs.getString("img_url"),
 						rs.getString("type"),rs.getString("author"),
-						detailDesc,rs.getString("publisher"),
+						rs.getString("publisher"),detailDesc,
 						rs.getString("edition"));
 				h.put(rs.getInt("book_id"), b);
 			}

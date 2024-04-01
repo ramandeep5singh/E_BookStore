@@ -23,7 +23,7 @@ overflow: auto;">
                 <div class="cart-item d-flex">
                     <div class="book-selected">
                         <div class="img">
-                            <img src="../../books/images/Head_First.jpg" alt="">
+                            <img src="../../<%= b.getImg_url() %>" alt="">
                         </div>
                         <div class="q-in d-flex justify-content-center">
                             <span>Quantity: <%= b.getQuantity() %></span>

@@ -63,12 +63,24 @@
                                         <span class="stocks" style="color: #000080;
                                         font-size: initial;
                                         font-weight: normal;">Status:&nbsp 
-                                            <span style="background: transparent;
-                                            color: #000080;
-                                            font-size: 1.25vw;
-                                            font-weight: 400;" id="stock">
-                                               
-                                            </span>
+                                            <%  if(b.getStatus() == 1){ %>
+                                                <span style="background: transparent;
+                                                color: red;
+                                                font-size: 1.25vw;
+                                                font-weight: 600;" id="stock">'UnderProcess'</span>
+                                            <%  }
+                                                else if(b.getStatus() == 2){ %>
+                                                    <span style="background: transparent;
+                                                    color: yellow;
+                                                    font-size: 1.25vw;
+                                                    font-weight: 600;" id="stock">'Acknowledged'</span>
+                                            <%  } 
+                                                else{ %>
+                                                    <span style="background: transparent;
+                                                    color: green;
+                                                    font-size: 1.25vw;
+                                                    font-weight: 600;" id="stock">'Dispatched'</span>
+                                            <%  } %>
                                         </span>
                                         <span class="stocks" style="color: #000080;
                                         font-size: initial;
@@ -92,13 +104,14 @@
                                     <span><i class="fa-solid fa-indian-rupee-sign"></i><%= b.getPrice() %></span>
                                 </div>
                             </div>
-                            <div class="confirm d-flex justify-content-center">
-                                <form style="padding: 0;" action="../../cancelOrder" method="get">
-                                    <input type="hidden" name="id" value="<%= b.getOrderId() %>">
-                                    <input type="hidden" name="status" value="<%= b.getStatus() %>" id="status">
-                                    <button type="submit" style="width: 100%;" id="cancelOrder">Cancel</button>
-                                </form>
-                            </div>
+                            <%  if(b.getStatus()==1){ %>
+                                <div class="confirm d-flex justify-content-center">
+                                    <form style="padding: 0;" action="../../cancelOrder" method="get">
+                                        <input type="hidden" name="id" value="<%= b.getOrderId() %>">
+                                        <button type="submit" style="width: 100%;">Cancel</button>
+                                    </form>
+                                </div>
+                            <%  } %>
                         </div>
                     </div>
                 </div>

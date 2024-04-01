@@ -20,7 +20,7 @@ public class UserOrders {
 					+ "orders.quantity as quantity, orders.orderId as orderId, "
 					+ " books.name as name, books.price as price, books.img_url as img_url "
 					+ "from orders inner join books on books.book_id = "
-					+ "orders.orderId where email = ?;");
+					+ "orders.book_Id where email = ?;");
 			ps.setString(1, email);
 			rs = ps.executeQuery();
 			

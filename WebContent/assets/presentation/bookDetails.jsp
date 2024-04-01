@@ -180,7 +180,7 @@
                 <span>by&nbsp</span><span class="ap"><%= author %></span>
             </div>
             <div class="aut-pub">
-                <span class="ap"><%= description %></span><span>(Publisher)</span>
+                <span class="ap"><%= publisher %></span><span>(Publisher)</span>
             </div>
             <div class="purchase">
                 <div class="buy-cart row justify-content-between">
@@ -219,7 +219,7 @@
         </div>
         <div class="description">
             <p>
-                <%= publisher %>
+                <%= description %>
             </p>
         </div>
     </section>

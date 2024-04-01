@@ -109,6 +109,15 @@
   	<url-pattern>/acknowledge</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>cancelOrder</servlet-name>
+  	<servlet-class>servletPack.CancelOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cancelOrder</servlet-name>
+  	<url-pattern>/cancelOrder</url-pattern>
+  </servlet-mapping>
+  
   <context-param>
   	<param-name>admin123</param-name>
   	<param-value>123admin</param-value>

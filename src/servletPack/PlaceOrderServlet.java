@@ -2,6 +2,10 @@ package servletPack;
 
 import OrderPack.PlaceOrderBean;
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 
@@ -29,12 +33,6 @@ public class PlaceOrderServlet extends HttpServlet {
         po.setPayment(Integer.parseInt(status));
         
         if(po.order()) {
-//        	out.print("<p style='color: red; position: absolute; "
-//					+ "text-align: center; width: 100%; top: 5vw;'>"
-//					+ "Ordered Successfully!!</p>");
-//			
-//			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-//			rd.include(request,response);
         	response.sendRedirect("index.jsp");
         }
         else {

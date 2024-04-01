@@ -6,6 +6,7 @@ import java.io.*;
 import java.util.Map;
 import java.util.HashMap;
 import bookPack.Book;
+import bookPack.CartCheckBean;
 
 public class CartServlet extends HttpServlet {
 	private static boolean isSerialized(String fileName) {
@@ -39,28 +40,40 @@ public class CartServlet extends HttpServlet {
 			emailFolder.mkdir();
 		}
 		
-		Book b = new Book(name, Integer.parseInt(price), Integer.parseInt(stock), 
-				imgUrl, type, author, publisher, description, edition);
+		CartCheckBean cb = new CartCheckBean();
 		
-		String serFile = folder + File.separator + b.getName() + id + ".ser";
-		
-		if(!isSerialized(serFile)) {
-			FileOutputStream file = new FileOutputStream(serFile);
-			ObjectOutputStream objectOut = new ObjectOutputStream(file);
-			objectOut.writeObject(b);
-			
-			file.close();
-			objectOut.close();
-			
-			response.sendRedirect("assets/presentation/booksDisp.jsp");
-		}
-		else {
+		if(cb.checkOrder(id)) {
 			out.print("<p style='color: red; position: absolute; "
 					+ "text-align: center; width: 100%; top: 8vw;'>"
-					+ "Already added to cart!!</p>");
+					+ "Item already been Ordered By you!!</p>");
 			
 			RequestDispatcher rd = request.getRequestDispatcher("assets/presentation/booksDisp.jsp");
 			rd.include(request,response);
+		}
+		else {
+			Book b = new Book(name, Integer.parseInt(price), Integer.parseInt(stock), 
+					imgUrl, type, author, publisher, description, edition);
+			
+			String serFile = folder + File.separator + b.getName() + id + ".ser";
+			
+			if(!isSerialized(serFile)) {
+				FileOutputStream file = new FileOutputStream(serFile);
+				ObjectOutputStream objectOut = new ObjectOutputStream(file);
+				objectOut.writeObject(b);
+				
+				file.close();
+				objectOut.close();
+				
+				response.sendRedirect("index.jsp");
+			}
+			else {
+				out.print("<p style='color: red; position: absolute; "
+						+ "text-align: center; width: 100%; top: 8vw;'>"
+						+ "Already added to cart!!</p>");
+				
+				RequestDispatcher rd = request.getRequestDispatcher("assets/presentation/booksDisp.jsp");
+				rd.include(request,response);
+			}
 		}
 	}
 }

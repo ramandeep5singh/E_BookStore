@@ -4,7 +4,7 @@ function placeholderOut(element){
     elementId.style.transform = "";
     elementId.style.left = "10%";
     elementId.style.top = "25%";
-    elementId.style.zIndex = "10";
+    elementId.style.zIndex = "12";
     elementId.style.color = "#000080";
     elementId.style.fontWeight = "bold"; 
     elementId.style.fontSize = "1.5vw";
@@ -32,7 +32,7 @@ function textAreaPlaceholderOut(element){
     elementId.style.transform = "";
     elementId.style.left = "10%";
     elementId.style.top = "2%";
-    elementId.style.zIndex = "10";
+    elementId.style.zIndex = "12";
     elementId.style.color = "#000080";
     elementId.style.fontWeight = "bold"; 
     elementId.style.fontSize = "1.5vw";
