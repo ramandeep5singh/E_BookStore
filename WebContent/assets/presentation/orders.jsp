@@ -81,7 +81,6 @@
     String stock = request.getParameter("stock");
 
     int delivery = 0;
-    int totalPrice = delivery+Integer.parseInt(price);
     
     Cookie[] cookies = request.getCookies();
     
@@ -168,7 +167,7 @@
                             <form id="ajax-form" action="../../ajaxlogin" method="post">
                                 <div class="login-signup d-flex justify-content-evenly" style="padding: 1vw;">
                                     <div class="position-relative">
-                                        <span class="position-absolute" id="email1">Enter Email ID</span>
+                                        <span class="position-absolute" id="email1">Email ID</span>
                                         <input type="email" name="email" id="email" 
                                         onfocus="placeholderOut(this)" onblur="placeholderIn(this)">
                                     </div>
@@ -177,7 +176,7 @@
                                         transform: translatey(-50%);
                                         left: 7px;
                                         z-index: -1;
-                                        color: grey;" id="password1">Enter Password</span>
+                                        color: grey;" id="password1">Password</span>
                                         <input type="password" name="password" id="password" 
                                         onfocus="placeholderOut(this)" onblur="placeholderIn(this)">
                                     </div>
@@ -250,7 +249,7 @@
                         </div>
                         <div class="q-in d-flex justify-content-center">
                             <i class="fa-solid fa-minus" onclick="quantity(2)" style="cursor: pointer;"></i>
-                            <input type="number" name="quantity" id="quantity" value="1">
+                            <input type="number" name="quantity" id="quantity" value="1" onblur="checkStock(this)">
                             <i class="fa-solid fa-plus" onclick="quantity(1)" style="cursor: pointer;"></i>
                         </div>
                     </div>
@@ -312,7 +311,7 @@
                 </div>
                 <div class="items d-flex justify-content-between">
                     <span>TOTAL:</span>
-                    <span><i class="fa-solid fa-indian-rupee-sign" id="total-bill"></i><%= totalPrice %></span>
+                    <span><i class="fa-solid fa-indian-rupee-sign" id="total-bill"></i><%= price %></span>
                 </div>
             </div>
             <p><i class="fa-solid fa-square-check" 

@@ -8,9 +8,7 @@ function placeholderOut(element){
     elementId.style.color = "#000080";
     elementId.style.fontWeight = "bold"; 
     elementId.style.fontSize = "1.5vw";
-    elementId.style.letterSpacing = "6px";    
-
-
+    elementId.style.letterSpacing = "6px";
 }
 function placeholderIn(element){
     let input = document.getElementById(element.id);

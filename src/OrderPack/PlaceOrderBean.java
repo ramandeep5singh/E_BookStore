@@ -92,6 +92,9 @@ public class PlaceOrderBean {
 			String bookPath = cartPath + File.separator + email + File.separator + 
 					name + bookId + ".ser";	
 			Path filePath = Paths.get(bookPath);
+			if(!Files.exists(filePath)) {
+				return true;
+			}
 	        try {
 	            Files.delete(filePath);
 	            return true;

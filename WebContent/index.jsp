@@ -125,7 +125,7 @@
         <div class="position-relative">
 	<%  if(userName==null || !userName.equals("admin")){ %> 
         <div class="position-relative">
-            <jsp:include page="assets/presentation/booksCarousel.html" />
+            <jsp:include page="assets/presentation/booksCarousel.jsp" />
             <jsp:include page="assets/presentation/booksDisp.jsp" />
         </div>
         

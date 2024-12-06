@@ -4,6 +4,7 @@ function placeholderOut(element){
     elementId.style.transform = "";
     elementId.style.left = "0";
     elementId.style.top = "-2px";
+    elementId.style.zIndex = "12";
     elementId.style.color = "#000080";
     elementId.style.fontWeight = "bold";    
 }
@@ -45,7 +46,7 @@ function quantity(x){
         count++;
         if(count>maxQuant){
             alert("Out of stock!!");
-            count--;
+            count = maxQuant;
         }
         else{
             quantity.value = count;
@@ -55,10 +56,31 @@ function quantity(x){
         count--;
         if(count==0){
             alert("purchase atleast one item!!");
+            count = 1;
         }
         else{
             quantity.value = count;
         }
+    }
+}
+
+function checkStock(element){
+    count = element.value;
+    let quantity = document.getElementById("quantity");
+    let maxQuant = document.getElementById("stock").textContent;
+
+    if(count>maxQuant){
+        alert("Out of stock!!");
+        count = 1;
+        quantity.value = count;
+    }
+    else if(count<1){
+        alert("purchase atleast one item!!");
+        count = 1;
+        quantity.value = count;
+    }
+    else{
+        quantity.value = count;
     }
 }
 function showSummary(){

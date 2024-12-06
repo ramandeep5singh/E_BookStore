@@ -72,9 +72,11 @@
     margin-bottom: 1vw;
 }
 .img img{
-    width: 100%;
-    border: 3px solid #000080;
-    padding: 2px;
+    width: 50%;
+    align-self: center;
+    border: 2px solid #000080;
+    padding: 3px;
+	height: 50%;
 }
 .order-email{
     margin-bottom: 1vw;
