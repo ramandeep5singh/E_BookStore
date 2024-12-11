@@ -26,7 +26,7 @@ E_BookStore is my college project that provides a platform for buying books onli
 - **Java**: For backend development
 - **MySQL**: To store user and order data
 - **HTML, CSS, JavaScript**: For creating the user interface
-- **Bootstrap**: To make the website responsive
+- **Bootstrap**: To simplify styling
 - **Apache Tomcat**: For hosting the website locally
 - **JDK 8**: Java Development Kit used in the project
 
