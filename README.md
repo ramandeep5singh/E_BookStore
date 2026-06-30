@@ -1,12 +1,12 @@
 # E_BookStore — Learning Archive
 
-> **Repository Status**: This is a learning artifact from my early career (2023, Java Internship). I've since transitioned to **Generative AI Engineering** and no longer actively maintain this codebase. It's preserved here to document my learning journey.
+> **Repository Status**: This is a learning artifact from my early career (2024, Java Internship). I've since transitioned to **Generative AI Engineering** and no longer actively maintain this codebase. It's preserved here to document my learning journey.
 
 ---
 
 ## Context
 
-This repository represents my **first hands-on web development project** during my Java internship at Softsynth Software Solutions Pvt Ltd (2023). At that time, I was learning foundational backend integration, database management, and full-stack web concepts.
+This repository represents my **first hands-on web development project** during my Java internship at Softsynth Software Solutions Pvt Ltd (2024). At that time, I was learning foundational backend integration, database management, and full-stack web concepts.
 
 **Current Focus**: I now specialize in **AI Quality Assurance Engineering**, system prompt optimization, and RAG evaluation frameworks. See my active work on [MCP-Eval-Server](https://github.com/ramandeep5singh/MCP-Eval-Server) for current personal projects.
 
